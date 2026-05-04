@@ -1,0 +1,18 @@
+#include <stdio.h>
+
+typedef struct {
+    char nome[50];
+    float preco;
+    int estoque;
+} Produto;
+
+int main() {
+    Produto p1 = {"AirPods Pro", 1200.00, 5};
+    
+    printf("--- Gestao de Loja ---\n");
+    printf("Produto: %s\n", p1.nome);
+    printf("Preco: R$ %.2f\n", p1.preco);
+    printf("Estoque atual: %d unidades\n", p1.estoque);
+    
+    return 0;
+}
