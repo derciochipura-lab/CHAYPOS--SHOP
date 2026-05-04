@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech & Games Store</title>
+    <style>
+        :root { --blue: #00d4ff; --dark-bg: #0f0f0f; --card-bg: #1a1a1a; }
+        body { font-family: 'Segoe UI', sans-serif; margin: 0; background: var(--dark-bg); color: white; }
+        
+        /* Capa Estilizada */
+        header { 
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
+                        url('https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=1200');
+            background-size: cover; background-position: center;
+            padding: 80px 20px; text-align: center; border-bottom: 4px solid var(--blue);
+        }
+        h1 { font-size: 3rem; color: var(--blue); margin: 0; text-transform: uppercase; letter-spacing: 2px; }
+        
+        .vitrine { 
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+            gap: 25px; padding: 50px 10%; 
+        }
+
+        .card { 
+            background: var(--card-bg); border-radius: 15px; overflow: hidden; 
+            transition: 0.3s; border: 1px solid #333; text-align: center;
+        }
+        .card:hover { transform: translateY(-10px); border-color: var(--blue); box-shadow: 0 10px 20px rgba(0, 212, 255, 0.2); }
+        
+        /* Imagens automáticas da internet */
+        .card img { width: 100%; height: 200px; object-fit: cover; }
+        
+        .info { padding: 20px; }
+        .categoria { color: var(--blue); font-size: 0.8rem; text-transform: uppercase; font-weight: bold; }
+        .preco { color: #00ff88; font-size: 1.5rem; font-weight: bold; margin: 10px 0; }
+        
+        .btn-whats { 
+            display: inline-block; background: var(--blue); color: #000; 
+            padding: 12px 25px; border-radius: 30px; text-decoration: none; 
+            font-weight: bold; transition: 0.3s;
+        }
+        .btn-whats:hover { background: #008fb3; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Tech & Games Store</h1>
+        <p>Os melhores acessórios e jogos em um só lugar</p>
+    </header>
+
+    <div class="vitrine">
+        <!-- Produto 1 -->
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1605464315542-bda3e2f4e605?w=500" alt="Airpods">
+            <div class="info">
+                <span class="categoria">Áudio</span>
+                <h3>AirPods Pro Premium</h3>
+                <p class="preco">R$ 189,90</p>
+                <a href="https://wa.me/SEUNUMERO" class="btn-whats">Comprar no Zap</a>
+            </div>
+        </div>
+
+        <!-- Produto 2 -->
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?w=500" alt="Jogo">
+            <div class="info">
+                <span class="categoria">Games</span>
+                <h3>Combo Jogos Ação</h3>
+                <p class="preco">R$ 299,00</p>
+                <a href="https://wa.me/SEUNUMERO" class="btn-whats">Comprar no Zap</a>
+            </div>
+        </div>
+
+        <!-- Produto 3 -->
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1589492477829-5e65395b66cc?w=500" alt="Capa">
+            <div class="info">
+                <span class="categoria">Acessórios</span>
+                <h3>Capa Silicone iPhone</h3>
+                <p class="preco">R$ 59,90</p>
+                <a href="https://wa.me/SEUNUMERO" class="btn-whats">Comprar no Zap</a>
+            </div>
+        </div>
+
+        <!-- Produto 4 -->
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1583863788434-e58a36330cf0?w=500" alt="Carregador">
+            <div class="info">
+                <span class="categoria">Energia</span>
+                <h3>Carregador Turbo 20W</h3>
+                <p class="preco">R$ 85,00</p>
+                <a href="https://wa.me/SEUNUMERO" class="btn-whats">Comprar no Zap</a>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
