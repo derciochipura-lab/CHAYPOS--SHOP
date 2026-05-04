@@ -3,86 +3,138 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tech, Games & Sneakers</title>
+    <title>ULTIMATE STORE - Mozambique</title>
     <style>
-        :root { --primary: #00d4ff; --bg: #0a0a0a; --card: #161616; --price: #00ff88; }
-        body { font-family: 'Segoe UI', sans-serif; margin: 0; background: var(--bg); color: white; }
+        :root { --primary: #00d4ff; --dark: #0a0a0a; --card: #151515; --green: #25d366; --text: #f0f0f0; }
+        body { font-family: 'Segoe UI', sans-serif; margin: 0; background: var(--dark); color: var(--text); line-height: 1.6; }
         
         header { 
-            background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), 
-                        url('https://images.unsplash.com/photo-1460353581641-37baddab0fa2?w=1200');
-            background-size: cover; padding: 60px 20px; text-align: center; border-bottom: 4px solid var(--primary);
+            background: linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.85)), url('https://images.unsplash.com/photo-1556740734-7f9a2b770ff9?w=1200');
+            background-size: cover; background-position: center; padding: 80px 20px; text-align: center; border-bottom: 4px solid var(--primary);
+        }
+        header h1 { font-size: 3rem; margin: 0; color: var(--primary); text-transform: uppercase; }
+
+        .container { max-width: 1400px; margin: auto; padding: 20px; }
+        
+        .categoria-titulo { 
+            background: var(--primary); color: black; display: inline-block; 
+            padding: 10px 30px; border-radius: 0 25px 25px 0; margin: 40px 0 20px -20px;
+            font-weight: bold; text-transform: uppercase;
         }
 
-        .container { padding: 40px 10%; }
-        h2 { border-left: 5px solid var(--primary); padding-left: 15px; margin-top: 40px; color: var(--primary); }
-
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 25px; margin-top: 20px; }
-
-        .card { background: var(--card); border-radius: 12px; overflow: hidden; border: 1px solid #333; transition: 0.3s; }
-        .card:hover { transform: translateY(-10px); border-color: var(--primary); }
-        .card img { width: 100%; height: 220px; object-fit: cover; }
-        
-        .info { padding: 20px; text-align: center; }
-        .preco { color: var(--price); font-size: 1.6rem; font-weight: bold; margin: 10px 0; }
-        
-        .btn-whats { 
-            display: inline-block; background: #25d366; color: white; 
-            padding: 12px 20px; border-radius: 8px; text-decoration: none; 
-            font-weight: bold; width: 80%; transition: 0.3s;
+        .vitrine { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); 
+            gap: 20px; 
         }
-        .btn-whats:hover { background: #128c7e; }
 
-        footer { text-align: center; padding: 40px; background: #000; margin-top: 50px; font-size: 0.9rem; }
+        .card { background: var(--card); border-radius: 10px; overflow: hidden; border: 1px solid #222; transition: 0.3s; display: flex; flex-direction: column; }
+        .card:hover { transform: translateY(-8px); border-color: var(--primary); box-shadow: 0 5px 15px rgba(0,212,255,0.3); }
+        .card img { width: 100%; height: 200px; object-fit: cover; background: #222; }
+        
+        .info { padding: 15px; flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between; }
+        .info h3 { font-size: 1rem; margin: 0 0 10px 0; height: 40px; overflow: hidden; }
+        .preco { color: #00ff88; font-size: 1.3rem; font-weight: bold; margin-bottom: 15px; }
+        
+        .btn-buy { 
+            background: var(--green); color: white; padding: 10px; text-align: center;
+            border-radius: 5px; text-decoration: none; font-weight: bold; font-size: 0.85rem;
+        }
+
+        footer { text-align: center; padding: 60px; background: #000; margin-top: 50px; border-top: 1px solid #333; }
     </style>
 </head>
 <body>
 
     <header>
-        <h1>SNEAKERS & TECH STORE</h1>
-        <p>Pagamentos via M-Pesa ou E-Mola | Entregas em todo o país</p>
+        <h1>ULTIMATE STORE</h1>
+        <p>SNEAKERS • GAMES • ACESSÓRIOS</p>
+        <p>Pagamentos: M-Pesa | E-Mola | Entregas em todo o país</p>
     </header>
 
     <div class="container">
         
-        <!-- SEÇÃO DE SAPATOS -->
-        <h2>👟 Sneakers / Sapatos</h2>
-        <div class="grid">
+        <!-- CATEGORIA: JOGOS DE TABULEIRO -->
+        <div class="categoria-titulo">🎲 Jogos de Diversão</div>
+        <div class="vitrine">
+            <!-- Jogo 1 -->
             <div class="card">
-                <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=500" alt="Nike Red">
+                <img src="https://images.unsplash.com/photo-1610890716171-6b1bb98ffd09?w=400" alt="30 Segundos">
                 <div class="info">
-                    <h3>Nike Air Max Sport</h3>
-                    <p class="preco">4.500 MT</p>
-                    <a href="https://wa.me/258874055437?text=Olá! Tenho interesse no Nike Air Max de 4.500 MT" class="btn-whats">Comprar / Pagar</a>
+                    <h3>30 Seconds Board Game</h3>
+                    <p class="preco">1200 MT</p>
+                    <a href="https://wa.me/258874055437?text=Quero+comprar+o+jogo+30+Seconds" class="btn-buy">Comprar via WhatsApp</a>
                 </div>
             </div>
+            <!-- Jogo 2 -->
             <div class="card">
-                <img src="https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?w=500" alt="Sneaker Fashion">
+                <img src="https://images.unsplash.com/photo-1589802829985-817e51181b92?w=400" alt="Monopoly">
                 <div class="info">
-                    <h3>Sneaker Urban Style</h3>
-                    <p class="preco">3.200 MT</p>
-                    <a href="https://wa.me/258874055437?text=Olá! Tenho interesse no Sneaker Urban de 3.200 MT" class="btn-whats">Comprar / Pagar</a>
+                    <h3>Monopoly Classic</h3>
+                    <p class="preco">1.800 MT</p>
+                    <a href="https://wa.me/258874055437?text=Quero+comprar+o+Monopoly" class="btn-buy">Comprar via WhatsApp</a>
                 </div>
             </div>
+            <!-- Jogo 3 -->
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1623932237371-9a71206b6b3b?w=400" alt="Uno">
+                <div class="info">
+                    <h3>Jogo de Cartas UNO</h3>
+                    <p class="preco">850 MT</p>
+                    <a href="https://wa.me/258874055437?text=Quero+comprar+o+UNO" class="btn-buy">Comprar via WhatsApp</a>
+                </div>
+            </div>
+            <!-- Jogo 4: Adicione mais aqui... -->
         </div>
 
-        <!-- SEÇÃO DE TECNOLOGIA -->
-        <h2>📱 Acessórios e Jogos</h2>
-        <div class="grid">
+        <!-- CATEGORIA: SNEAKERS -->
+        <div class="categoria-titulo">👟 Sneakers & Calçados</div>
+        <div class="vitrine">
+            <!-- Sapatos (Exemplos: Jordan, Adidas, Vans) -->
             <div class="card">
-                <img src="https://images.unsplash.com/photo-1605464315542-bda3e2f4e605?w=500" alt="Airpods">
+                <img src="https://images.unsplash.com/photo-1597045566774-ed106a042f05?w=400" alt="Jordan 11">
                 <div class="info">
-                    <h3>AirPods Pro Gen 2</h3>
-                    <p class="preco">1.800 MT</p>
-                    <a href="https://wa.me/258874055437?text=Olá! Tenho interesse nos AirPods de 1.800 MT" class="btn-whats">Comprar / Pagar</a>
+                    <h3>Air Jordan 11 Retro</h3>
+                    <p class="preco">2800 MT</p>
+                    <a href="https://wa.me/258874055437?text=Quero+o+Jordan+11" class="btn-buy">Comprar via WhatsApp</a>
                 </div>
             </div>
             <div class="card">
-                <img src="https://images.unsplash.com/photo-1606144042614-b2417e99c4e3?w=500" alt="Jogo PS5">
+                <img src="https://images.unsplash.com/photo-1520639889313-751975e65620?w=400" alt="Adidas Campus">
                 <div class="info">
-                    <h3>FIFA 25 - PS5</h3>
-                    <p class="preco|">4.200 MT</p>
-                    <a href="https://wa.me/258874055437?text=Olá! Tenho interesse no FIFA 25 de 4.200 MT" class="btn-whats">Comprar / Pagar</a>
+                    <h3>Adidas Campus Grey</h3>
+                    <p class="preco">2500MT</p>
+                    <a href="https://wa.me/258874055437?text=Quero+o+Adidas+Campus" class="btn-buy">Comprar via WhatsApp</a>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?w=400" alt="Vans">
+                <div class="info">
+                    <h3>Vans Old School Black</h3>
+                    <p class="preco">2.800 MT</p>
+                    <a href="https://wa.me/258874055437?text=Quero+o+Vans+Old+School" class="btn-buy">Comprar via WhatsApp</a>
+                </div>
+            </div>
+            <!-- Continue adicionando os outros 20 sapatos seguindo este modelo -->
+        </div>
+
+        <!-- CATEGORIA: ACESSÓRIOS -->
+        <div class="categoria-titulo">⌚ Acessórios & Relógios</div>
+        <div class="vitrine">
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1603313011101-31c72ee782a1?w=400" alt="Capas">
+                <div class="info">
+                    <h3>Capa iPhone Silicone (Várias Cores)</h3>
+                    <p class="preco">550 MT</p>
+                    <a href="https://wa.me/258874055437?text=Quero+capas+iPhone" class="btn-buy">Comprar via WhatsApp</a>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=400" alt="Relogio">
+                <div class="info">
+                    <h3>Smartwatch Series 9</h3>
+                    <p class="preco">3.500 MT</p>
+                    <a href="https://wa.me/258874055437?text=Quero+o+Smartwatch" class="btn-buy">Comprar via WhatsApp</a>
                 </div>
             </div>
         </div>
@@ -90,7 +142,8 @@
     </div>
 
     <footer>
-        <p>&copy; 2026 Tech & Sneakers Moçambique. Pagamentos seguros via emola.</p>
+        <p>&copy; 2026 Ultimate Store Moçambique | Especialistas em Importação</p>
+        <p>📍 Maputo | Entregas Rápidas</p>
     </footer>
 
 </body>
