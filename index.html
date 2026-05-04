@@ -3,170 +3,120 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shaypos | Sneakers, Games & Acessórios</title>
+    <title>Shaypos | Bem-vindo à Loja #1</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
-        :root { --gold: #d4af37; --blue: #00d4ff; --dark: #050505; --card: #121212; --green: #25d366; }
+        :root { --blue: #00d4ff; --dark: #080808; --card: #121212; --green: #25d366; }
+        * { box-sizing: border-box; }
         body { font-family: 'Poppins', sans-serif; margin: 0; background: var(--dark); color: white; scroll-behavior: smooth; }
-        
-        /* Seção de Boas-Vindas (Hero) */
-        .welcome-section { 
-            background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), 
-                        url('https://images.unsplash.com/photo-1556740758-90de374c12ad?w=1200');
-            background-size: cover; background-position: center;
-            height: 80vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center;
-            border-bottom: 3px solid var(--blue);
+
+        header { 
+            height: 60vh; background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('https://images.unsplash.com/photo-1556740758-90de374c12ad?w=1200');
+            background-size: cover; background-position: center; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center;
         }
-        .welcome-section h1 { font-size: 4rem; color: var(--blue); margin: 0; text-shadow: 2px 2px 10px rgba(0,212,255,0.5); }
-        .welcome-section p { font-size: 1.5rem; max-width: 700px; color: #ddd; margin-top: 15px; }
-        .trust-badge { background: var(--blue); color: black; padding: 5px 20px; border-radius: 20px; font-weight: bold; margin-bottom: 20px; }
+
+        .welcome-msg { background: rgba(0, 212, 255, 0.1); border: 1px solid var(--blue); padding: 20px; border-radius: 15px; margin: 20px auto; max-width: 800px; text-align: center; }
+        .welcome-msg h2 { color: var(--blue); margin-top: 0; }
+
+        .filter-container { text-align: center; padding: 20px; position: sticky; top: 0; background: var(--dark); z-index: 100; border-bottom: 1px solid #222; }
+        .filter-btn { background: transparent; border: 1px solid var(--blue); color: var(--blue); padding: 8px 20px; margin: 5px; cursor: pointer; border-radius: 20px; font-weight: 600; }
+        .filter-btn.active { background: var(--blue); color: black; }
 
         .container { max-width: 1400px; margin: auto; padding: 20px; }
-        .categoria-header { display: flex; align-items: center; margin: 50px 0 30px; }
-        .categoria-header h2 { font-size: 2rem; border-left: 6px solid var(--blue); padding-left: 15px; text-transform: uppercase; }
+        .vitrine { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 25px; }
 
-        /* Vitrine */
-        .vitrine { 
-            display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); 
-            gap: 25px; 
-        }
-
-        .card { 
-            background: var(--card); border-radius: 15px; overflow: hidden; 
-            border: 1px solid #222; transition: all 0.4s ease;
-            display: flex; flex-direction: column;
-        }
-        .card:hover { transform: translateY(-15px); border-color: var(--blue); box-shadow: 0 10px 30px rgba(0,212,255,0.2); }
-        .card img { width: 100%; height: 250px; object-fit: contain; background: #fff; padding: 10px; box-sizing: border-box; }
+        .card { background: var(--card); border-radius: 12px; overflow: hidden; border: 1px solid #222; display: flex; flex-direction: column; transition: 0.3s; }
+        .card:hover { transform: scale(1.02); border-color: var(--blue); }
+        .card img { width: 100%; height: 250px; object-fit: contain; background: #fff; padding: 15px; }
         
-        .info { padding: 20px; text-align: center; flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between; }
-        .info h3 { font-size: 1.1rem; margin: 0; color: #fff; }
-        .preco { color: #00ff88; font-size: 1.6rem; font-weight: bold; margin: 15px 0; }
+        .info { padding: 15px; text-align: center; flex-grow: 1; }
+        .preco { color: #00ff88; font-size: 1.5rem; font-weight: 700; margin: 10px 0; }
         
-        .btn-whats { 
-            background: var(--green); color: white; padding: 12px; text-align: center;
-            border-radius: 10px; text-decoration: none; font-weight: bold; 
-            display: flex; align-items: center; justify-content: center; gap: 10px;
-        }
-        .btn-whats:hover { background: #1ebe57; filter: brightness(1.2); }
+        .btn-buy { display: block; background: var(--green); color: white; padding: 12px; border-radius: 8px; text-decoration: none; font-weight: bold; font-size: 0.9rem; }
 
-        footer { text-align: center; padding: 80px 20px; background: #000; margin-top: 100px; border-top: 1px solid #333; }
+        .whatsapp-fixed { 
+            position: fixed; bottom: 30px; right: 30px; background: var(--green); 
+            width: 70px; height: 70px; border-radius: 50%; display: flex; flex-direction: column; align-items: center; 
+            justify-content: center; box-shadow: 0 4px 15px rgba(0,0,0,0.4); z-index: 1000;
+            text-decoration: none; color: white; border: 2px solid white;
+        }
+
+        footer { padding: 40px; text-align: center; border-top: 1px solid #222; margin-top: 50px; color: #666; }
     </style>
-    <!-- Importando Fonte Poppins -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <section class="welcome-section">
-        <div class="trust-badge">LOJA CONFIÁVEL EM MOÇAMBIQUE</div>
-        <h1>Bem-vindos à Shaypos shop</h1>
-        <p>A sua loja online de Sneakers originais, jogos de tabuleiro e acessórios de luxo.</p>
-        <p style="font-size: 1rem; color: var(--blue);">Qualidade garantida • Entregas rápidas • Pagamento seguro</p>
-    </section>
+    <header>
+        <h1 style="font-size: 4rem; color: var(--blue); margin: 0;">SHAYPOS</h1>
+        <p style="font-size: 1.2rem;">Onde o estilo encontra a diversão.</p>
+    </header>
 
     <div class="container">
-        
-        <!-- JOGOS DE TABULEIRO -->
-        <div class="categoria-header"><h2>🎲 Jogos de Diversão</h2></div>
-        <div class="vitrine">
-            <!-- 30 Segundos -->
-            <div class="card">
-                <img src="https://m.media-amazon.com/images/I/81N7Fp6A-HL._AC_SL1500_.jpg" alt="30 Seconds">
-                <div class="info">
-                    <h3>30 Seconds - O Jogo de Tabuleiro</h3>
-                    <p class="preco">1200 MT</p>
-                    <a href="https://wa.me/25874055437?text=Olá+Shaypos!+Quero+comprar+o+jogo+30+Seconds" class="btn-whats">Pedir no WhatsApp</a>
-                </div>
-            </div>
-            <!-- Uno -->
-            <div class="card">
-                <img src="https://m.media-amazon.com/images/I/71u9S+Y6slL._AC_SL1500_.jpg" alt="UNO">
-                <div class="info">
-                    <h3>Jogo de Cartas UNO Original</h3>
-                    <p class="preco">850 MT</p>
-                    <a href="https://wa.me/25874055437?text=Olá+Shaypos!+Quero+comprar+o+UNO" class="btn-whats">Pedir no WhatsApp</a>
-                </div>
-            </div>
-            <!-- Monopoly -->
-            <div class="card">
-                <img src="https://m.media-amazon.com/images/I/81I697A6p8L._AC_SL1500_.jpg" alt="Monopoly">
-                <div class="info">
-                    <h3>Monopoly Classic Moçambique</h3>
-                    <p class="preco">2000 MT</p>
-                    <a href="https://wa.me/25874055437?text=Olá+Shaypos!+Quero+comprar+o+Monopoly" class="btn-whats">Pedir no WhatsApp</a>
-                </div>
-            </div>
+        <!-- MENSAGEM DE BEM-VINDO -->
+        <div class="welcome-msg">
+            <h2>Bem-vindo à Shaypos! 🇲🇿</h2>
+            <p>Explore nossa coleção exclusiva de Sneakers e Jogos de Tabuleiro. Qualidade premium, entrega rápida e o melhor atendimento de Moçambique. Sinta-se em casa!</p>
         </div>
+    </div>
 
-        <!-- SNEAKERS -->
-        <div class="categoria-header"><h2>👟 Sneakers Exclusivos</h2></div>
+    <div class="filter-container">
+        <button class="filter-btn active" onclick="filterSelection('all')">Tudo</button>
+        <button class="filter-btn" onclick="filterSelection('sapatos')">Sneakers</button>
+        <button class="filter-btn" onclick="filterSelection('jogos')">Jogos</button>
+    </div>
+
+    <div class="container">
         <div class="vitrine">
-            <!-- Jordan 11 -->
-            <div class="card">
-                <img src="https://images.unsplash.com/photo-1597045566774-ed106a042f05?w=500" alt="Jordan 11">
+            
+            <!-- EXEMPLE CARDS (Repita para chegar em +30) -->
+            <div class="card" data-category="jogos">
+                <img src="https://m.media-amazon.com/images/I/81N7Fp6A-HL._AC_SL1500_.jpg" alt="30 Segundos">
                 <div class="info">
-                    <h3>Air Jordan 11 Retro Cherry</h3>
-                    <p class="preco">2200 MT</p>
-                    <a href="https://wa.me/25874055437?text=Olá+Shaypos!+Quero+o+Jordan+11" class="btn-whats">Pedir no WhatsApp</a>
+                    <h3>30 Seconds Board Game</h3>
+                    <p class="preco">2.800 MT</p>
+                    <a href="https://wa.me/258874055437?text=Olá+Shaypos!+Gostaria+de+comprar+o+jogo+30+Seconds" class="btn-buy">🛒 Comprar no WhatsApp</a>
                 </div>
             </div>
-            <!-- Jordan Retro -->
-            <div class="card">
-                <img src="https://images.unsplash.com/photo-1556906781-9a412961c28c?w=500" alt="Jordan Retro">
-                <div class="info">
-                    <h3>Air Jordan 1 Retro High OG</h3>
-                    <p class="preco">2500 MT</p>
-                    <a href="https://wa.me/25874055437?text=Olá+Shaypos!+Quero+o+Jordan+Retro" class="btn-whats">Pedir no WhatsApp</a>
-                </div>
-            </div>
-            <!-- Adidas Campus -->
-            <div class="card">
-                <img src="https://m.media-amazon.com/images/I/61f-F2M773L._AC_UY1000_.jpg" alt="Adidas Campus">
-                <div class="info">
-                    <h3>Adidas Campus 00s Grey</h3>
-                    <p class="preco">1800 MT</p>
-                    <a href="https://wa.me/25874055437?text=Olá+Shaypos!+Quero+o+Adidas+Campus" class="btn-whats">Pedir no WhatsApp</a>
-                </div>
-            </div>
-            <!-- Vans Old School -->
-            <div class="card">
-                <img src="https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?w=500" alt="Vans">
-                <div class="info">
-                    <h3>Vans Old School Classic Black</h3>
-                    <p class="preco">2500 MT</p>
-                    <a href="https://wa.me/25874055437?text=Olá+Shaypos!+Quero+o+Vans+Old+School" class="btn-whats">Pedir no WhatsApp</a>
-                </div>
-            </div>
-        </div>
 
-        <!-- ACESSÓRIOS -->
-        <div class="categoria-header"><h2>⌚ Relógios & Celulares</h2></div>
-        <div class="vitrine">
-            <div class="card">
-                <img src="https://m.media-amazon.com/images/I/71Y6G6In3tL._AC_SL1500_.jpg" alt="Relogio">
+            <div class="card" data-category="sapatos">
+                <img src="https://images.unsplash.com/photo-1597045566774-ed106a042f05?w=500" alt="Jordan">
                 <div class="info">
-                    <h3>Relógio Casio G-Shock Rugged</h3>
-                    <p class="preco">3500 MT</p>
-                    <a href="https://wa.me/25874055437?text=Olá+Shaypos!+Quero+o+G-Shock" class="btn-whats">Pedir no WhatsApp</a>
+                    <h3>Air Jordan 11 Retro</h3>
+                    <p class="preco">8.500 MT</p>
+                    <a href="https://wa.me/258874055437?text=Olá+Shaypos!+Tenho+interesse+no+Air+Jordan+11" class="btn-buy">🛒 Comprar no WhatsApp</a>
                 </div>
             </div>
-            <div class="card">
-                <img src="https://m.media-amazon.com/images/I/61vSsh169pL._AC_SL1500_.jpg" alt="Capas">
-                <div class="info">
-                    <h3>Capa Silicone MagSafe iPhone</h3>
-                    <p class="preco">850 MT</p>
-                    <a href="https://wa.me/25874055437?text=Olá+Shaypos!+Quero+a+capa+iPhone" class="btn-whats">Pedir no WhatsApp</a>
-                </div>
-            </div>
-        </div>
 
+        </div>
     </div>
 
     <footer>
-        <p><strong>SHAYPOS MOÇAMBIQUE</strong></p>
-        <p>Especialistas em Artigos de Luxo e Diversão.</p>
-        <p>📍 Entregas na beira, chimoio e Províncias.</p>
-        <p>💳 Pagamentos via M-Pesa, E-Mola e Transferência.</p>
+        <p>&copy; 2026 SHAYPOS MOÇAMBIQUE - Qualidade em cada detalhe.</p>
     </footer>
 
+    <!-- BOTÃO "APLICATIVO WHATSAPP" PARA CONVERSAR -->
+    <a href="https://wa.me/258874055437?text=Olá+Shaypos!+Gostaria+de+falar+com+um+atendente." class="whatsapp-fixed" target="_blank">
+        <span style="font-size: 10px; font-weight: bold;">FALAR NO</span>
+        <span style="font-size: 14px; font-weight: bold;">ZAP</span>
+    </a>
+
+    <script>
+        function filterSelection(c) {
+            var x, i;
+            x = document.getElementsByClassName("card");
+            if (c == "all") c = "";
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+                if (x[i].getAttribute("data-category").indexOf(c) > -1 || c == "") {
+                    x[i].style.display = "flex";
+                }
+            }
+            var btns = document.getElementsByClassName("filter-btn");
+            for (var j = 0; j < btns.length; j++) {
+                btns[j].classList.remove("active");
+            }
+            event.currentTarget.classList.add("active");
+        }
+    </script>
 </body>
 </html>
