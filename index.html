@@ -4,65 +4,56 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SHAYPOS | Elite Store Beira</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         :root { --gold: #d4af37; --dark: #0a0a0a; --card: #151515; --wsp: #25d366; }
-        body { font-family: 'Poppins', sans-serif; background: var(--dark); color: #fff; margin: 0; scroll-behavior: smooth; }
-        
-        header { padding: 80px 20px; text-align: center; border-bottom: 3px solid var(--gold); background: linear-gradient(to bottom, #111, #0a0a0a); }
-        .logo { font-family: 'Montserrat', sans-serif; font-size: clamp(3rem, 10vw, 5rem); color: var(--gold); letter-spacing: 12px; margin-bottom: 10px; }
-        .welcome-text { max-width: 700px; margin: 0 auto; color: #ccc; font-weight: 300; line-height: 1.8; }
-
+        body { font-family: 'Poppins', sans-serif; background: var(--dark); color: #fff; margin: 0; }
+        header { padding: 60px 20px; text-align: center; border-bottom: 3px solid var(--gold); background: linear-gradient(to bottom, #111, #0a0a0a); }
+        .logo { font-family: 'Montserrat', sans-serif; font-size: 4rem; color: var(--gold); letter-spacing: 10px; margin: 0; }
+        .welcome-msg { color: #888; margin-top: 10px; font-size: 1.1rem; }
         .container { max-width: 1200px; margin: 40px auto; padding: 0 20px; }
         .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 25px; }
-        
         .card { background: var(--card); border-radius: 15px; border: 1px solid #222; overflow: hidden; text-align: center; transition: 0.3s; }
         .card:hover { border-color: var(--gold); transform: translateY(-5px); }
-        .card img { width: 100%; height: 280px; object-fit: cover; }
-        
+        .card img { width: 100%; height: 250px; object-fit: cover; }
         .info { padding: 15px; }
-        .info h4 { margin: 10px 0; font-size: 0.95rem; height: 40px; overflow: hidden; display: flex; align-items: center; justify-content: center; }
-        .price { color: var(--gold); font-weight: 800; font-size: 1.3rem; display: block; margin-bottom: 15px; }
+        .info h4 { margin: 10px 0; font-size: 0.95rem; height: 40px; overflow: hidden; }
+        .price { color: var(--gold); font-weight: 800; font-size: 1.2rem; display: block; margin-bottom: 15px; }
+        .btn { background: var(--wsp); color: #fff; text-decoration: none; padding: 10px; border-radius: 8px; display: flex; align-items: center; justify-content: center; gap: 8px; font-weight: 700; }
         
-        .btn { background: var(--wsp); color: #fff; text-decoration: none; padding: 12px; border-radius: 8px; display: flex; align-items: center; justify-content: center; gap: 8px; font-weight: 700; transition: 0.3s; }
-        .btn:hover { background: #1eb954; transform: scale(1.02); }
-
-        .footer-info { background: #111; padding: 60px 20px; text-align: center; border-top: 1px solid #222; margin-top: 50px; }
-        .footer-info i { color: var(--wsp); font-size: 2.5rem; margin-bottom: 15px; }
-        .location-box { margin-bottom: 25px; }
-        .whatsapp-number { font-size: 1.5rem; font-weight: 700; color: #fff; text-decoration: none; display: block; margin-top: 10px; }
-        
-        footer { padding: 30px; text-align: center; color: #444; font-size: 0.8rem; letter-spacing: 2px; }
+        /* RODAPÉ NOVO */
+        .footer-content { background: #111; padding: 40px 20px; text-align: center; border-top: 1px solid var(--gold); margin-top: 50px; }
+        .footer-content i { color: var(--wsp); font-size: 2rem; margin-bottom: 10px; }
+        .footer-content p { margin: 5px 0; color: #ccc; }
+        .footer-content .num { font-size: 1.5rem; font-weight: 700; color: #fff; display: block; margin: 10px 0; text-decoration: none; }
     </style>
 </head>
 <body>
 
 <header>
     <div class="logo">SHAYPOS</div>
-    <div class="welcome-text">
-        <p>Bem-vindo à Shaypos. Somos a tua loja de elite na Beira, oferecendo o melhor em Sneakers, Moda e Tecnologia com qualidade premium garantida.</p>
-    </div>
+    <p class="welcome-msg">Bem-vindo à Shaypos. Estilo e qualidade premium na Beira.</p>
 </header>
 
 <div class="container">
     <div class="grid">
-        <div class="card"><img src="Air Jordan branco.jpg.jpg"><div class="info"><h4>Air Jordan 1 White</h4><span class="price">8.500 MT</span><a href="https://wa.me/258874055437?text=Olá Shaypos! Tenho interesse no Air Jordan 1 White." class="btn"><i class="fab fa-whatsapp"></i> COMPRAR</a></div></div>
-        <div class="card"><img src="Jornan 11.jpg.jpg"><div class="info"><h4>Air Jordan 11 Retro</h4><span class="price">9.500 MT</span><a href="https://wa.me/258874055437?text=Olá Shaypos! Tenho interesse no Air Jordan 11 Retro." class="btn"><i class="fab fa-whatsapp"></i> COMPRAR</a></div></div>
-        <div class="card"><img src="Air Jordan.jpg.jpg"><div class="info"><h4>Air Jordan Navy</h4><span class="price">8.500 MT</span><a href="https://wa.me/258874055437?text=Olá Shaypos! Tenho interesse no Air Jordan Navy." class="btn"><i class="fab fa-whatsapp"></i> COMPRAR</a></div></div>
-        <div class="card"><img src="Air jordan.jpg (2).jpg"><div class="info"><h4>Nike Dunk Rosa</h4><span class="price">6.500 MT</span><a href="https://wa.me/258874055437?text=Olá Shaypos! Tenho interesse no Nike Dunk Rosa." class="btn"><i class="fab fa-whatsapp"></i> COMPRAR</a></div></div>
-        <div class="card"><img src="Crocs.jpg.jpg"><div class="info"><h4>Crocs Classic</h4><span class="price">2.500 MT</span><a href="https://wa.me/258874055437?text=Olá Shaypos! Tenho interesse nos Crocs Classic." class="btn"><i class="fab fa-whatsapp"></i> COMPRAR</a></div></div>
+        <div class="card"><img src="Air Jordan branco.jpg.jpg"><div class="info"><h4>Air Jordan 1 White</h4><span class="price">8.500 MT</span><a href="https://wa.me/258874055437?text=Olá! Quero o Air Jordan 1 White" class="btn"><i class="fab fa-whatsapp"></i> COMPRAR</a></div></div>
+        <div class="card"><img src="Jornan 11.jpg.jpg"><div class="info"><h4>Air Jordan 11 Retro</h4><span class="price">9.500 MT</span><a href="https://wa.me/258874055437?text=Olá! Quero o Air Jordan 11 Retro" class="btn"><i class="fab fa-whatsapp"></i> COMPRAR</a></div></div>
+        <div class="card"><img src="Air Jordan.jpg.jpg"><div class="info"><h4>Air Jordan Navy</h4><span class="price">8.500 MT</span><a href="https://wa.me/258874055437?text=Olá! Quero o Air Jordan Navy" class="btn"><i class="fab fa-whatsapp"></i> COMPRAR</a></div></div>
+        <div class="card"><img src="Air jordan.jpg (2).jpg"><div class="info"><h4>Nike Dunk Rosa</h4><span class="price">6.500 MT</span><a href="https://wa.me/258874055437?text=Olá! Quero o Nike Dunk Rosa" class="btn"><i class="fab fa-whatsapp"></i> COMPRAR</a></div></div>
+        <div class="card"><img src="Crocs.jpg.jpg"><div class="info"><h4>Crocs Classic</h4><span class="price">2.500 MT</span><a href="https://wa.me/258874055437?text=Olá! Quero os Crocs Classic" class="btn"><i class="fab fa-whatsapp"></i> COMPRAR</a></div></div>
 
-        <div class="card"><img src="Real Madrid.jpg.jpg"><div class="info"><h4>Camisa Real Madrid</h4><span class="price">1.800 MT</span><a href="https://wa.me/258874055437?text=Olá Shaypos! Tenho interesse na Camisa do Real Madrid." class="btn"><i class="fab fa-whatsapp"></i> COMPRAR</a></div></div>
-        <div class="card"><img src="Barcelona .jpg.jpg"><div class="info"><h4>Camisa Barcelona</h4><span class="price">1.800 MT</span><a href="https://wa.me/258874055437?text=Olá Shaypos! Tenho interesse na Camisa do Barcelona." class="btn"><i class="fab fa-whatsapp"></i> COMPRAR</a></div></div>
-        <div class="card"><img src="Argentona.jpg.jpg"><div class="info"><h4>Camisa Argentina</h4><span class="price">1.800 MT</span><a href="https://wa.me/258874055437?text=Olá Shaypos! Tenho interesse na Camisa da Argentina." class="btn"><i class="fab fa-whatsapp"></i> COMPRAR</a></div></div>
-        <div class="card"><img src="Bayern .jpg.jpg"><div class="info"><h4>Camisa Bayern</h4><span class="price">1.800 MT</span><a href="https://wa.me/258874055437?text=Olá Shaypos! Tenho interesse na Camisa do Bayern." class="btn"><i class="fab fa-whatsapp"></i> COMPRAR</a></div></div>
-        <div class="card"><img src="Chelsea.jpg.jpg"><div class="info"><h4>Camisa Chelsea</h4><span class="price">1.800 MT</span><a href="https://wa.me/258874055437?text=Olá Shaypos! Tenho interesse na Camisa do Chelsea." class="btn"><i class="fab fa-whatsapp"></i> COMPRAR</a></div></div>
+        <div class="card"><img src="Real Madrid.jpg.jpg"><div class="info"><h4>Camisa Real Madrid</h4><span class="price">1.800 MT</span><a href="https://wa.me/258874055437?text=Olá! Quero a Camisa Real Madrid" class="btn"><i class="fab fa-whatsapp"></i> COMPRAR</a></div></div>
+        <div class="card"><img src="Barcelona .jpg.jpg"><div class="info"><h4>Camisa Barcelona</h4><span class="price">1.800 MT</span><a href="https://wa.me/258874055437?text=Olá! Quero a Camisa Barcelona" class="btn"><i class="fab fa-whatsapp"></i> COMPRAR</a></div></div>
+        <div class="card"><img src="Argentona.jpg.jpg"><div class="info"><h4>Camisa Argentina</h4><span class="price">1.800 MT</span><a href="https://wa.me/258874055437?text=Olá! Quero a Camisa Argentina" class="btn"><i class="fab fa-whatsapp"></i> COMPRAR</a></div></div>
+        <div class="card"><img src="Bayern .jpg.jpg"><div class="info"><h4>Camisa Bayern</h4><span class="price">1.800 MT</span><a href="https://wa.me/258874055437?text=Olá! Quero a Camisa Bayern" class="btn"><i class="fab fa-whatsapp"></i> COMPRAR</a></div></div>
+        <div class="card"><img src="Chelsea.jpg.jpg"><div class="info"><h4>Camisa Chelsea</h4><span class="price">1.800 MT</span><a href="https://wa.me/258874055437?text=Olá! Quero a Camisa Chelsea" class="btn"><i class="fab fa-whatsapp"></i> COMPRAR</a></div></div>
         
-        <div class="card"><img src="PSG.jpg.jpg"><div class="info"><h4>Camisa PSG</h4><span class="price">1.800 MT</span><a href="https://wa.me/258874055437?text=Olá Shaypos! Tenho interesse na Camisa do PSG." class="btn"><i class="fab fa-whatsapp"></i> COMPRAR</a></div></div>
-        <div class="card"><img src="Newcastle.jpg.jpg"><div class="info"><h4>Camisa Newcastle</h4><span class="price">1.800 MT</span><a href="https://wa.me/258874055437?text=Olá Shaypos! Tenho interesse na Camisa do Newcastle." class="btn"><i class="fab fa-whatsapp"></i> COMPRAR</a></div></div>
-        <div class="card"><img src="Tothenham.jpg.jpg"><div class="info"><h4>Camisa Tottenham</h4><span class="price">1.800 MT</span><a href="https://wa.me/258874055437?text=Olá Shaypos! Tenho interesse na Camisa do Tottenham." class="btn"><i class="fab fa-whatsapp"></i> COMPRAR</a></div></div>
-        <div class="card"><img src="Aston villa.lpg.jpg"><div class="info"><h4>Camisa Aston Villa</h4><span class="price">1.800 MT</span><a href="https://wa.me/258874055437?text=Olá Shaypos! Tenho interesse na Camisa do Aston Villa." class="btn"><i class="fab fa-whatsapp"></i> COMPRAR</a></div></div>
-        <div class="card"><img src="T-shirts over size.jpg.jpg"><div class="info"><h4>T-shirt Oversize</h4><span class="price">1.200 MT</span><a href="https://wa.me/258874055437?text=Olá Shaypos! Tenho interesse na T-shirt Oversize." class="btn"><i class="fab fa-whatsapp"></i> COMPRAR</a></div></div>
+        <div class="card"><img src="PSG.jpg.jpg"><div class="info"><h4>Camisa PSG</h4><span class="price">1.800 MT</span><a href="https://wa.me/258874055437?text=Olá! Quero a Camisa PSG" class="btn"><i class="fab fa-whatsapp"></i> COMPRAR</a></div></div>
+        <div class="card"><img src="Newcastle.jpg.jpg"><div class="info"><h4>Camisa Newcastle</h4><span class="price">1.800 MT</span><a href="https://wa.me/258874055437?text=Olá! Quero a Camisa Newcastle" class="btn"><i class="fab fa-whatsapp"></i> COMPRAR</a></div></div>
+        <div class="card"><img src="Tothenham.jpg.jpg"><div class="info"><h4>Camisa Tottenham</h4><span class="price">1.800 MT</span><a href="https://wa.me/258874055437?text=Olá! Quero a Camisa Tottenham" class="btn"><i class="fab fa-whatsapp"></i> COMPRAR</a></div></div>
+        <div class="card"><img src="Aston villa.lpg.jpg"><div class="info"><h4>Camisa Aston Villa</h4><span class="price">1.800 MT</span><a href="https://wa.me/258874055437?text=Olá! Quero a Camisa Aston Villa" class="btn"><i class="fab fa-whatsapp"></i> COMPRAR</a></div></div>
+        <div class="card"><img src="T-shirts over size.jpg.jpg"><div class="info"><h4>T-shirt Oversize</h4><span class="price">1.200 MT</span><a href="https://wa.me/258874055437?text=Olá! Quero a T-shirt Oversize" class="btn"><i class="fab fa-whatsapp"></i> COMPRAR</a></div></div>
 
-        <div
+        <div class="card"><img src="
