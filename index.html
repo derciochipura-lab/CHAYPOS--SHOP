@@ -3,166 +3,73 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shaypos | Loja Oficial</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <title>Shaypos | Loja Oficial Beira</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         :root {
             --gold: #d4af37;
+            --gold-bright: #f1c40f;
             --dark-bg: #0a0a0a;
-            --card-bg: #161616;
+            --card-bg: #1a1a1a;
             --whatsapp: #25d366;
         }
 
         body {
             font-family: 'Poppins', sans-serif;
             background-color: var(--dark-bg);
-            color: #fff;
+            color: #ffffff;
             margin: 0;
             padding: 0;
-            scroll-behavior: smooth;
         }
 
+        /* HEADER & BOAS-VINDAS */
         header {
-            height: 70vh;
-            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.9)), 
-                        url('Air Jordan branco.jpg.jpg'); 
-            background-size: cover;
-            background-position: center;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            border-bottom: 3px solid var(--gold);
+            height: 75vh;
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.9)), url('Air Jordan branco.jpg.jpg');
+            background-size: cover; background-position: center;
+            display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center;
+            border-bottom: 4px solid var(--gold);
         }
 
         header h1 {
-            font-family: 'Montserrat', sans-serif;
-            font-size: clamp(3rem, 10vw, 5rem);
-            margin: 0;
-            letter-spacing: 10px;
-            color: var(--gold);
+            font-family: 'Montserrat', sans-serif; font-size: clamp(3rem, 10vw, 6rem);
+            letter-spacing: 12px; color: var(--gold); margin: 0;
         }
 
         .welcome-msg {
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-            padding: 25px 45px;
-            border-radius: 20px;
-            margin-top: 20px;
-            border: 1px solid rgba(212, 175, 55, 0.3);
-            max-width: 80%;
+            background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(10px);
+            padding: 30px; border-radius: 20px; border: 1px solid var(--gold);
+            max-width: 800px; margin-top: 20px;
         }
 
-        .welcome-msg h2 {
-            margin: 0;
-            color: var(--gold);
-            font-family: 'Montserrat', sans-serif;
+        /* VITRINE */
+        .container { max-width: 1400px; margin: 0 auto; padding: 50px 20px; }
+        .vitrine { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 30px; }
+        
+        .card {
+            background: var(--card-bg); border-radius: 20px; overflow: hidden;
+            border: 1px solid #2a2a2a; transition: 0.4s; position: relative;
         }
 
-        .container {
-            max-width: 1200px;
-            margin: 0 auto 50px;
-            padding: 0 20px;
-        }
-
-        .filter-container {
-            text-align: center;
-            margin: 40px 0;
+        .card:hover { transform: translateY(-10px); border-color: var(--gold); }
+        .card img { width: 100%; height: 300px; object-fit: cover; }
+        
+        .info { padding: 20px; text-align: center; }
+        .preco { display: block; font-size: 1.6rem; font-weight: 800; color: var(--gold-bright); margin: 15px 0; }
+        
+        .btn-buy {
+            background: var(--whatsapp); color: white; padding: 12px;
+            border-radius: 12px; text-decoration: none; display: flex;
+            align-items: center; justify-content: center; gap: 10px; font-weight: 700;
         }
 
         .filter-btn {
-            background: transparent;
-            border: 1px solid var(--gold);
-            color: var(--gold);
-            padding: 8px 25px;
-            margin: 5px;
-            border-radius: 20px;
-            cursor: pointer;
-            transition: 0.3s;
-            font-weight: 600;
+            background: transparent; border: 2px solid var(--gold); color: var(--gold);
+            padding: 10px 25px; border-radius: 50px; cursor: pointer; margin: 5px;
         }
 
-        .filter-btn:hover, .filter-btn.active {
-            background: var(--gold);
-            color: #000;
-        }
-
-        .vitrine {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-            gap: 30px;
-        }
-
-        .card {
-            background: var(--card-bg);
-            border-radius: 20px;
-            overflow: hidden;
-            transition: 0.4s;
-            border: 1px solid #222;
-        }
-
-        .card:hover {
-            transform: translateY(-10px);
-            border-color: var(--gold);
-        }
-
-        .card img {
-            width: 100%;
-            height: 300px;
-            object-fit: cover;
-        }
-
-        .info {
-            padding: 20px;
-            text-align: center;
-        }
-
-        .preco {
-            display: block;
-            font-size: 1.5rem;
-            font-weight: bold;
-            color: var(--gold);
-            margin: 10px 0;
-        }
-
-        .btn-buy {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-            background: var(--whatsapp);
-            color: white;
-            padding: 12px 25px;
-            border-radius: 30px;
-            text-decoration: none;
-            font-weight: 600;
-        }
-
-        .whatsapp-float {
-            position: fixed;
-            bottom: 30px;
-            right: 30px;
-            background: var(--whatsapp);
-            color: white;
-            width: 65px;
-            height: 65px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 35px;
-            z-index: 1000;
-            text-decoration: none;
-        }
-
-        footer {
-            text-align: center;
-            padding: 60px 20px;
-            color: #777;
-            border-top: 1px solid #222;
-        }
+        .filter-btn.active { background: var(--gold); color: #000; }
     </style>
 </head>
 <body>
@@ -171,37 +78,59 @@
         <h1>SHAYPOS</h1>
         <div class="welcome-msg">
             <h2>Bem-vindo à Shaypos!</h2>
-            <p>🇲🇿 A tua loja de confiança na <b>Beira</b>. Estilo, qualidade e as melhores marcas aos melhores preços.</p>
-            <p style="font-size: 0.9rem; color: #ccc;"><i class="fas fa-truck"></i> Fazemos entregas em toda a cidade!</p>
+            <p>A tua loja de referência na cidade da <b>Beira</b>.</p>
+            <p>Qualidade premium e os melhores preços em Moçambique.</p>
         </div>
     </header>
 
-    <div class="container">
-        <div class="filter-container">
-            <button class="filter-btn active" onclick="filterItems('todos')">Todos</button>
-            <button class="filter-btn" onclick="filterItems('sneakers')">Sneakers</button>
-            <button class="filter-btn" onclick="filterItems('roupas')">Roupas</button>
-            <button class="filter-btn" onclick="filterItems('outros')">Gadgets & Jogos</button>
+    <div class="container" style="text-align: center;">
+        <div style="margin-bottom: 40px;">
+            <button class="filter-btn active">TODOS OS 23 ITENS</button>
         </div>
 
         <div class="vitrine">
-            
-            <div class="card" data-cat="sneakers">
-                <img src="Air Jordan branco.jpg.jpg" alt="Air Jordan Branca">
-                <div class="info"><h3>Air Jordan White</h3><span class="preco">8.500 MT</span><a href="https://wa.me/258874055437?text=Quero+o+Jordan+Branco" class="btn-buy">Pedir agora</a></div>
-            </div>
-            <div class="card" data-cat="sneakers">
-                <img src="Jornan 11.jpg.jpg" alt="Jordan 11">
-                <div class="info"><h3>Air Jordan 11 Retro</h3><span class="preco">9.500 MT</span><a href="https://wa.me/258874055437?text=Quero+o+Jordan+11" class="btn-buy">Pedir agora</a></div>
-            </div>
-            <div class="card" data-cat="sneakers">
-                <img src="Crocs.jpg.jpg" alt="Crocs">
-                <div class="info"><h3>Crocs Classic</h3><span class="preco">2.500 MT</span><a href="https://wa.me/258874055437?text=Quero+a+Crocs" class="btn-buy">Pedir agora</a></div>
+            <div class="card">
+                <img src="Air Jordan branco.jpg.jpg">
+                <div class="info"><h3>Air Jordan 1 White</h3><span class="preco">8.500 MT</span>
+                <a href="https://wa.me/258874055437" class="btn-buy">PEDIR NO WHATSAPP</a></div>
             </div>
 
-            <div class="card" data-cat="outros">
-                <img src="Airpods 1.jpg.jpg" alt="AirPods Branco">
-                <div class="info"><h3>AirPods Pro White</h3><span class="preco">14.500 MT</span><a href="https://wa.me/258874055437?text=Quero+os+Airpods+Brancos" class="btn-buy">Pedir agora</a></div>
+            <div class="card">
+                <img src="Jornan 11.jpg.jpg">
+                <div class="info"><h3>Air Jordan 11 Retro</h3><span class="preco">9.500 MT</span>
+                <a href="https://wa.me/258874055437" class="btn-buy">PEDIR NO WHATSAPP</a></div>
             </div>
-            <div class="card" data-cat="outros">
-                <img src="Airpods preto1.jpg.jpg" alt="Air
+
+            <div class="card">
+                <img src="Crocs.jpg.jpg">
+                <div class="info"><h3>Crocs Classic</h3><span class="preco">2.500 MT</span>
+                <a href="https://wa.me/258874055437" class="btn-buy">PEDIR NO WHATSAPP</a></div>
+            </div>
+
+            <div class="card">
+                <img src="Airpods 1.jpg.jpg">
+                <div class="info"><h3>AirPods Pro White</h3><span class="preco">14.500 MT</span>
+                <a href="https://wa.me/258874055437" class="btn-buy">PEDIR NO WHATSAPP</a></div>
+            </div>
+
+            <div class="card">
+                <img src="Airpods preto1.jpg.jpg">
+                <div class="info"><h3>AirPods Pro Black</h3><span class="preco">15.000 MT</span>
+                <a href="https://wa.me/258874055437" class="btn-buy">PEDIR NO WHATSAPP</a></div>
+            </div>
+
+            <div class="card">
+                <img src="uno.jpg.jpg">
+                <div class="info"><h3>Jogo UNO</h3><span class="preco">600 MT</span>
+                <a href="https://wa.me/258874055437" class="btn-buy">PEDIR NO WHATSAPP</a></div>
+            </div>
+
+            <div class="card">
+                <img src="30 segundos.jpg.jpg">
+                <div class="info"><h3>Jogo 30 Segundos</h3><span class="preco">2.800 MT</span>
+                <a href="https://wa.me/258874055437" class="btn-buy">PEDIR NO WHATSAPP</a></div>
+            </div>
+
+            <div class="card">
+                <img src="Real Madrid.jpg.jpg">
+                <div class="info"><h3>Camisa Real Madrid</h3><span class="preco">1.800 MT</span>
