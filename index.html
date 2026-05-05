@@ -1,212 +1,47 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shaypos | Catálogo Completo Moçambique</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <style>
-        :root { --blue: #00d4ff; --dark: #080808; --card: #121212; --green: #25d366; }
-        * { box-sizing: border-box; }
-        body { font-family: 'Poppins', sans-serif; margin: 0; background: var(--dark); color: white; scroll-behavior: smooth; }
-
-        header { 
-            height: 50vh; background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=1200');
-            background-size: cover; background-position: center; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center;
-        }
-        
-        .welcome-section { padding: 40px 20px; text-align: center; }
-        .welcome-box { border: 2px solid var(--blue); padding: 30px; border-radius: 20px; max-width: 900px; margin: auto; background: rgba(0, 212, 255, 0.05); }
-        .welcome-box h2 { color: var(--blue); margin-bottom: 10px; font-size: 2rem; }
-
-        .filter-container { text-align: center; padding: 25px; position: sticky; top: 0; background: var(--dark); z-index: 100; border-bottom: 1px solid #222; }
-        .filter-btn { background: transparent; border: 1px solid var(--blue); color: var(--blue); padding: 10px 20px; margin: 5px; cursor: pointer; border-radius: 30px; font-weight: 600; transition: 0.3s; }
-        .filter-btn.active { background: var(--blue); color: black; }
-
-        .container { max-width: 1400px; margin: auto; padding: 20px; }
-        .vitrine { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 25px; }
-
-        .card { background: var(--card); border-radius: 15px; overflow: hidden; border: 1px solid #222; display: flex; flex-direction: column; transition: 0.4s; }
-        .card:hover { transform: translateY(-10px); border-color: var(--blue); box-shadow: 0 10px 30px rgba(0,212,255,0.2); }
-        
-        /* IMAGENS INTEIRAS */
-        .card img { width: 100%; height: 240px; object-fit: contain; background: #fff; padding: 15px; }
-        
-        .info { padding: 20px; text-align: center; flex-grow: 1; }
-        .info h3 { font-size: 1.1rem; margin: 10px 0; min-height: 50px; }
-        .preco { color: #00ff88; font-size: 1.4rem; font-weight: 700; margin-bottom: 15px; }
-        
-        .btn-buy { display: block; background: var(--green); color: white; padding: 12px; border-radius: 10px; text-decoration: none; font-weight: bold; }
-
-        .whatsapp-fixed { 
-            position: fixed; bottom: 30px; right: 30px; background: var(--green); 
-            width: 70px; height: 70px; border-radius: 50%; display: flex; flex-direction: column; align-items: center; 
-            justify-content: center; box-shadow: 0 4px 20px rgba(0,0,0,0.5); z-index: 1000;
-            text-decoration: none; color: white; border: 2px solid white;
-        }
-
-        footer { padding: 60px 20px; text-align: center; border-top: 1px solid #222; color: #555; }
-    </style>
-</head>
-<body>
-
-    <header>
-        <h1 style="font-size: clamp(3rem, 8vw, 5rem); color: var(--blue); margin: 0; letter-spacing: 5px;">SHAYPOS</h1>
-        <p style="font-size: 1.2rem; font-weight: 300;">Premium Sneakers & Gaming Hub</p>
-    </header>
-
-    <section class="welcome-section">
-        <div class="welcome-box">
-            <h2>🇲🇿 Bem-vindo à Família Shaypos!</h2>
-            <p>A loja número #1 em Moçambique para quem busca estilo e diversão. Explore nosso catálogo com os melhores Sneakers, Jogos de Tabuleiro e Acessórios para o seu celular. Qualidade garantida e entrega rápida em Maputo e arredores.</p>
-        </div>
-    </section>
-
-    <div class="filter-container">
-        <button class="filter-btn active" onclick="filterSelection('all')">Todos Produtos</button>
-        <button class="filter-btn" onclick="filterSelection('sapatilhas')">Sapatilhas</button>
-        <button class="filter-btn" onclick="filterSelection('jogos')">Jogos</button>
-        <button class="filter-btn" onclick="filterSelection('celular')">Acessórios Celular</button>
-    </div>
-
-    <div class="container">
-        <div class="vitrine">
-            
-            <!-- CATEGORIA: JOGOS -->
-            <div class="card" data-category="jogos">
-                <img src="https://m.media-amazon.com/images/I/71u9S+Y6slL._AC_SL1500_.jpg" alt="Uno">
-                <div class="info">
-                    <h3>Jogo de Cartas UNO Original</h3>
-                    <p class="preco">850 MT</p>
-                    <a href="https://wa.me/258874055437?text=Olá+Shaypos!+Quero+comprar+o+UNO" class="btn-buy">🛒 Comprar no Zap</a>
-                </div>
-            </div>
-
-            <div class="card" data-category="jogos">
-                <img src="https://m.media-amazon.com/images/I/81N7Fp6A-HL._AC_SL1500_.jpg" alt="30 Seconds">
-                <div class="info">
-                    <h3>30 Seconds Board Game</h3>
-                    <p class="preco">1200 MT</p>
-                    <a href="https://wa.me/258874055437?text=Olá+Shaypos!+Quero+o+jogo+30+Seconds" class="btn-buy">🛒 Comprar no Zap</a>
-                </div>
-            </div>
-
-            <div class="card" data-category="jogos">
-                <img src="https://m.media-amazon.com/images/I/81I697A6p8L._AC_SL1500_.jpg" alt="Monopoly">
-                <div class="info">
-                    <h3>Monopoly Classic Edition</h3>
-                    <p class="preco">2.100 MT</p>
-                    <a href="https://wa.me/258874055437?text=Olá+Shaypos!+Quero+o+Monopoly" class="btn-buy">🛒 Comprar no Zap</a>
-                </div>
-            </div>
-
-            <!-- CATEGORIA: SAPATILHAS -->
-            <div class="card" data-category="sapatilhas">
-                <img src="https://images.unsplash.com/photo-1597045566774-ed106a042f05?w=500" alt="Jordan">
-                <div class="info">
-                    <h3>Air Jordan 11 Retro</h3>
-                    <p class="preco">2100 MT</p>
-                    <a href="https://wa.me/258874055437?text=Olá+Shaypos!+Quero+o+Air+Jordan+11" class="btn-buy">🛒 Comprar no Zap</a>
-                </div>
-            </div>
-
-            <div class="card" data-category="sapatilhas">
-                <img src="https://m.media-amazon.com/images/I/61f-F2M773L._AC_UY1000_.jpg" alt="Adidas Campus">
-                <div class="info">
-                    <h3>Adidas Campus 00s Grey</h3>
-                    <p class="preco">1800 MT</p>
-                    <a href="https://wa.me/258874055437?text=Olá+Shaypos!+Quero+o+Adidas+Campus" class="btn-buy">🛒 Comprar no Zap</a>
-                </div>
-            </div>
-
-            <div class="card" data-category="sapatilhas">
-                <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=500" alt="Nike">
-                <div class="info">
-                    <h3>Nike Air Max 90 Black</h3>
-                    <p class="preco">2300 MT</p>
-                    <a href="https://wa.me/258874055437?text=Olá+Shaypos!+Quero+o+Nike+Air+Max" class="btn-buy">🛒 Comprar no Zap</a>
-                </div>
-            </div>
-
-            <div class="card" data-category="sapatilhas">
-                <img src="https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?w=500" alt="Vans">
-                <div class="info">
-                    <h3>Vans Old School Classic</h3>
-                    <p class="preco">3.500 MT</p>
-                    <a href="https://wa.me/258874055437?text=Olá+Shaypos!+Quero+o+Vans+Old+School" class="btn-buy">🛒 Comprar no Zap</a>
-                </div>
-            </div>
-
-            <!-- CATEGORIA: ACESSÓRIOS CELULAR -->
-            <div class="card" data-category="celular">
-                <img src="https://m.media-amazon.com/images/I/61SUj2W5ySL._AC_SL1500_.jpg" alt="AirPods">
-                <div class="info">
-                    <h3>Apple AirPods Pro (2ª Gen)</h3>
-                    <p class="preco">650 MT</p>
-                    <a href="https://wa.me/258874055437?text=Olá+Shaypos!+Quero+os+AirPods+Pro" class="btn-buy">🛒 Comprar no Zap</a>
-                <div class ="info">
-                    <h3> Apple AirPods Pro (1ª Gen)</h3>
-                    <p class="preco">1100 MT</p>
-                 <a href="https://wa.me/258874055437?text=Olá+Shaypos!+Quero+os+AirPods+Pro" class="btn-buy">🛒 Comprar no Zap</a>
-            </div>
-
-            <div class="card" data-category="celular">
-                <img src="https://m.media-amazon.com/images/I/71z7866N6JL._AC_SL1500_.jpg" alt="Capas">
-                <div class="info">
-                    <h3>Capa Silicone iPhone All Models</h3>
-                    <p class="preco">800 MT</p>
-                    <a href="https://wa.me/258874055437?text=Olá+Shaypos!+Quero+uma+Capa+de+iPhone" class="btn-buy">🛒 Comprar no Zap</a>
-                </div>
-            </div>
-
-            <div class="card" data-category="celular">
-                <img src="https://m.media-amazon.com/images/I/61NfK+t9mPL._AC_SL1500_.jpg" alt="LCD">
-                <div class="info">
-                    <h3>Ecrã/LCD Original (Samsung/iPhone/Redmi)</h3>
-                    <p class="preco"> 1200/ 1800/ 1000</p>
-                    <a href="https://wa.me/258874055437?text=Olá+Shaypos!+Quero+saber+preço+de+LCD" class="btn-buy">🛒 Consultar Preço</a>
-                </div>
-            </div>
-
-            <div class="card" data-category="celular">
-                <img src="https://m.media-amazon.com/images/I/61Z6XpS5WTL._AC_SL1500_.jpg" alt="Protetor">
-                <div class="info">
-                    <h3>Protetor de Ecrã Cerâmica</h3>
-                    <p class="preco">400 MT</p>
-                    <a href="https://wa.me/258874055437?text=Olá+Shaypos!+Quero+um+Protetor+de+Ecrã" class="btn-buy">🛒 Comprar no Zap</a>
-                </div>
-            </div>
-
-
+<!-- === NOVIDADES: CROCS E CALÇADOS === -->
+    <div class="card" data-category="sapatilhas">
+        <img src="crocs.jpg" alt="Crocs Classic">
+        <div class="info">
+            <h3>Crocs Classic Clog</h3>
+            <p class="preco">2.500 MT</p>
+            <a href="https://wa.me/258874055437?text=Olá+Shaypos!+Quero+comprar+os+Crocs" class="btn-buy">🛒 Comprar no Zap</a>
         </div>
     </div>
 
-    <footer>
-        <p>&copy; 2026 SHAYPOS MOÇAMBIQUE. Criado por um futuro Engenheiro de Informática.</p>
-    </footer>
+    <!-- === NOVIDADES: VESTUÁRIO (T-SHIRTS E TEAMS) === -->
+    <div class="card" data-category="roupas">
+        <img src="camisa-time.jpg" alt="Camisa de Time">
+        <div class="info">
+            <h3>Camisas de Team (Época 24/25)</h3>
+            <p class="preco">1.800 MT</p>
+            <a href="https://wa.me/258874055437?text=Olá+Shaypos!+Quero+ver+as+camisas+de+time" class="btn-buy">🛒 Ver Modelos</a>
+        </div>
+    </div>
 
-    <a href="https://wa.me/258874055437?text=Olá+Shaypos!+Gostaria+de+conversar+sobre+um+produto." class="whatsapp-fixed" target="_blank">
-        <span style="font-size: 10px;">FALAR NO</span>
-        <b>ZAP</b>
-    </a>
+    <div class="card" data-category="roupas">
+        <img src="tshirt-oversize.jpg" alt="T-shirt Oversized">
+        <div class="info">
+            <h3>T-shirt Premium Oversized</h3>
+            <p class="preco">1.200 MT</p>
+            <a href="https://wa.me/258874055437?text=Olá+Shaypos!+Quero+as+t-shirts+oversized" class="btn-buy">🛒 Ver Cores</a>
+        </div>
+    </div>
 
-    <script>
-        function filterSelection(c) {
-            var x, i;
-            x = document.getElementsByClassName("card");
-            if (c == "all") c = "";
-            for (i = 0; i < x.length; i++) {
-                x[i].style.display = "none";
-                if (x[i].getAttribute("data-category").indexOf(c) > -1 || c == "") {
-                    x[i].style.display = "flex";
-                }
-            }
-            var btns = document.getElementsByClassName("filter-btn");
-            for (var j = 0; j < btns.length; j++) {
-                btns[j].classList.remove("active");
-            }
-            event.currentTarget.classList.add("active");
-        }
-    </script>
-</body>
-</html>
+    <div class="card" data-category="roupas">
+        <img src="tshirt-normal.jpg" alt="T-shirt">
+        <div class="info">
+            <h3>T-shirt Algodão Simples</h3>
+            <p class="preco">800 MT</p>
+            <a href="https://wa.me/258874055437?text=Olá+Shaypos!+Quero+as+t-shirts+normais" class="btn-buy">🛒 Comprar agora</a>
+        </div>
+    </div>
+
+    <!-- === NOVIDADES: ACESSÓRIOS AIRPODS === -->
+    <div class="card" data-category="celular">
+        <img src="protetor-airpods.jpg" alt="Protetor AirPods">
+        <div class="info">
+            <h3>Capa Protetora para AirPods</h3>
+            <p class="preco">500 MT</p>
+            <a href="https://wa.me/258874055437?text=Olá+Shaypos!+Quero+ver+protetores+de+AirPods" class="btn-buy">🛒 Escolher Cor</a>
+        </div>
+    </div>
