@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shaypos | Loja Oficial</title>
+    <title>Shaypos | Beira Official Store</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
@@ -24,7 +24,7 @@
         }
 
         header {
-            height: 60vh;
+            height: 70vh;
             background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.9)), 
                         url('Air Jordan branco.jpg.jpg'); 
             background-size: cover;
@@ -35,23 +35,38 @@
             align-items: center;
             text-align: center;
             border-bottom: 3px solid var(--gold);
+            padding: 20px;
         }
 
         header h1 {
             font-family: 'Montserrat', sans-serif;
-            font-size: clamp(3rem, 10vw, 5rem);
+            font-size: clamp(3rem, 10vw, 5.5rem);
             margin: 0;
-            letter-spacing: 10px;
+            letter-spacing: 12px;
             color: var(--gold);
+            text-transform: uppercase;
         }
 
-        .welcome-msg {
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-            padding: 15px 30px;
-            border-radius: 50px;
-            margin-top: 20px;
-            border: 1px solid rgba(255,255,255,0.2);
+        .welcome-section {
+            max-width: 800px;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(15px);
+            padding: 30px;
+            border-radius: 30px;
+            margin-top: 25px;
+            border: 1px solid rgba(212, 175, 55, 0.3);
+        }
+
+        .welcome-section h2 {
+            margin: 0 0 10px 0;
+            color: #fff;
+            font-size: 1.5rem;
+        }
+
+        .welcome-section p {
+            color: #ccc;
+            margin: 5px 0;
+            line-height: 1.6;
         }
 
         .container {
@@ -62,19 +77,21 @@
 
         .filter-container {
             text-align: center;
-            margin: 40px 0;
+            margin: 50px 0;
         }
 
         .filter-btn {
             background: transparent;
             border: 1px solid var(--gold);
             color: var(--gold);
-            padding: 8px 25px;
+            padding: 10px 25px;
             margin: 5px;
-            border-radius: 20px;
+            border-radius: 30px;
             cursor: pointer;
             transition: 0.3s;
             font-weight: 600;
+            text-transform: uppercase;
+            font-size: 0.8rem;
         }
 
         .filter-btn:hover, .filter-btn.active {
@@ -85,39 +102,49 @@
         .vitrine {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-            gap: 30px;
+            gap: 35px;
         }
 
         .card {
             background: var(--card-bg);
-            border-radius: 20px;
+            border-radius: 25px;
             overflow: hidden;
-            transition: 0.4s;
+            transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
             border: 1px solid #222;
         }
 
         .card:hover {
-            transform: translateY(-10px);
+            transform: translateY(-15px);
             border-color: var(--gold);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
         }
 
         .card img {
             width: 100%;
-            height: 300px;
+            height: 320px;
             object-fit: cover;
         }
 
         .info {
-            padding: 20px;
+            padding: 25px;
             text-align: center;
+        }
+
+        .info h3 {
+            margin: 0;
+            font-size: 1.1rem;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
         .preco {
             display: block;
-            font-size: 1.5rem;
+            font-size: 1.6rem;
             font-weight: bold;
             color: var(--gold);
-            margin: 10px 0;
+            margin: 15px 0;
         }
 
         .btn-buy {
@@ -127,10 +154,16 @@
             gap: 10px;
             background: var(--whatsapp);
             color: white;
-            padding: 12px 25px;
-            border-radius: 30px;
+            padding: 14px 25px;
+            border-radius: 35px;
             text-decoration: none;
             font-weight: 600;
+            transition: 0.3s;
+        }
+
+        .btn-buy:hover {
+            background: #1eb954;
+            transform: scale(1.05);
         }
 
         .whatsapp-float {
@@ -139,22 +172,24 @@
             right: 30px;
             background: var(--whatsapp);
             color: white;
-            width: 60px;
-            height: 60px;
+            width: 65px;
+            height: 65px;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 30px;
+            font-size: 35px;
             z-index: 1000;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.4);
+            text-decoration: none;
         }
 
         footer {
             text-align: center;
-            padding: 40px 20px;
-            color: #777;
+            padding: 60px 20px;
+            color: #666;
             border-top: 1px solid #222;
+            background: #050505;
         }
     </style>
 </head>
@@ -162,24 +197,51 @@
 
     <header>
         <h1>SHAYPOS</h1>
-        <div class="welcome-msg">
-            <p>🇲🇿 Beira | Estilo & Qualidade</p>
+        <div class="welcome-section">
+            <h2>Bem-vindo à Melhor Vitrine da Beira! 🇲🇿</h2>
+            <p>Qualidade premium, estilo exclusivo e os melhores preços de Moçambique.</p>
+            <p><b>📍 Localização:</b> Cidade da Beira | <b>🚚 Entregas:</b> Rápidas e Seguras</p>
+            <p style="font-size: 0.8rem; color: var(--gold); margin-top: 10px;">SELECIONE UMA CATEGORIA ABAIXO PARA EXPLORAR</p>
         </div>
     </header>
 
     <div class="container">
         <div class="filter-container">
-            <button class="filter-btn active" onclick="filterItems('todos')">Todos</button>
-            <button class="filter-btn" onclick="filterItems('sneakers')">Sneakers</button>
-            <button class="filter-btn" onclick="filterItems('roupas')">Roupas</button>
-            <button class="filter-btn" onclick="filterItems('outros')">Gadgets & Jogos</button>
+            <button class="filter-btn active" onclick="filterItems('todos')">Todos os Produtos</button>
+            <button class="filter-btn" onclick="filterItems('sneakers')">Sneakers & Calçado</button>
+            <button class="filter-btn" onclick="filterItems('roupas')">Camisas & Oversized</button>
+            <button class="filter-btn" onclick="filterItems('outros')">Jogos & Gadgets</button>
         </div>
 
         <div class="vitrine">
-            <div class="card" data-cat="outros">
-                <img src="uno.jpg.jpg" alt="Jogo UNO">
-                <div class="info"><h3>Jogo de Cartas UNO</h3><span class="preco">600 MT</span><a href="https://wa.me/258874055437?text=Quero+o+jogo+UNO" class="btn-buy">Pedir agora</a></div>
+            
+            <div class="card" data-cat="roupas">
+                <img src="Real Madrid.jpg.jpg" alt="Real Madrid">
+                <div class="info"><h3>Camisa Real Madrid 24/25</h3><span class="preco">1.800 MT</span><a href="https://wa.me/258874055437?text=Quero+a+camisa+do+Real+Madrid" class="btn-buy"><i class="fab fa-whatsapp"></i> Pedir agora</a></div>
             </div>
-            <div class="card" data-cat="outros">
-                <img src="30 segundos.jpg.jpg" alt="30 Seconds">
-                <div class="info"><h3>Jogo 30 Seconds</h3><span class="preco">2.800
+            <div class="card" data-cat="roupas">
+                <img src="Bayern .jpg.jpg" alt="Bayern">
+                <div class="info"><h3>Camisa Bayern Munich</h3><span class="preco">1.800 MT</span><a href="https://wa.me/258874055437?text=Quero+a+camisa+do+Bayern" class="btn-buy"><i class="fab fa-whatsapp"></i> Pedir agora</a></div>
+            </div>
+            <div class="card" data-cat="roupas">
+                <img src="Newcastle.jpg.jpg" alt="Newcastle">
+                <div class="info"><h3>Camisa Newcastle United</h3><span class="preco">1.800 MT</span><a href="https://wa.me/258874055437?text=Quero+a+camisa+do+Newcastle" class="btn-buy"><i class="fab fa-whatsapp"></i> Pedir agora</a></div>
+            </div>
+            <div class="card" data-cat="roupas">
+                <img src="PSG.jpg.jpg" alt="PSG">
+                <div class="info"><h3>Camisa PSG Training</h3><span class="preco">1.800 MT</span><a href="https://wa.me/258874055437?text=Quero+a+camisa+do+PSG" class="btn-buy"><i class="fab fa-whatsapp"></i> Pedir agora</a></div>
+            </div>
+            <div class="card" data-cat="roupas">
+                <img src="Tothenham.jpg.jpg" alt="Tottenham">
+                <div class="info"><h3>Camisa Tottenham</h3><span class="preco">1.800 MT</span><a href="https://wa.me/258874055437?text=Quero+a+camisa+do+Tottenham" class="btn-buy"><i class="fab fa-whatsapp"></i> Pedir agora</a></div>
+            </div>
+            <div class="card" data-cat="roupas">
+                <img src="Barcelona .jpg.jpg" alt="Barcelona">
+                <div class="info"><h3>Camisa FC Barcelona</h3><span class="preco">1.800 MT</span><a href="https://wa.me/258874055437?text=Quero+a+camisa+do+Barcelona" class="btn-buy"><i class="fab fa-whatsapp"></i> Pedir agora</a></div>
+            </div>
+            <div class="card" data-cat="roupas">
+                <img src="Chelsea.jpg.jpg" alt="Chelsea">
+                <div class="info"><h3>Camisa Chelsea FC</h3><span class="preco">1.800 MT</span><a href="https://wa.me/258874055437?text=Quero+a+camisa+do+Chelsea" class="btn-buy"><i class="fab fa-whatsapp"></i> Pedir agora</a></div>
+            </div>
+            <div class="card" data-cat="roupas">
+                <img src="Argentona.
