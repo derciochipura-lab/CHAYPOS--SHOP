@@ -85,11 +85,18 @@
             z-index: 1000; box-shadow: 0 10px 20px rgba(0,0,0,0.4); text-decoration: none;
         }
 
-        /* LOCALIZAÇÃO */
-        .location-info {
-            margin-top: 40px; padding: 20px; background: rgba(212, 175, 55, 0.05);
-            border-radius: 15px; border-left: 4px solid var(--gold); display: inline-block;
+        /* INFORMAÇÕES EXTRAS NO RODAPÉ */
+        .store-details {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+            text-align: left;
+            border-top: 1px solid #222;
+            padding-top: 40px;
         }
+        .detail-item i { color: var(--gold); font-size: 1.5rem; margin-bottom: 10px; }
+        .detail-item h5 { color: var(--gold); margin-bottom: 10px; text-transform: uppercase; }
 
         footer { background: #050505; padding: 60px 20px; text-align: center; border-top: 1px solid #222; }
     </style>
@@ -119,12 +126,13 @@
         </div>
 
         <div class="product-grid" id="grid">
+            
             <div class="product-card" data-cat="sneakers">
                 <div class="img-box"><img src="Air Jordan branco.jpg.jpg"></div>
                 <div class="product-info">
                     <h4>Air Jordan 1 White Classic</h4>
                     <div class="price-tag"><span class="price">1350 MT</span></div>
-                    <a href="https://wa.me/258874055437?text=Olá!%20Gostaria%20de%20pedir%20o%20Air%20Jordan%201%20White%20Classic" class="buy-now"><i class="fab fa-whatsapp"></i> COMPRAR</a>
+                    <a href="https://wa.me/258874055437?text=Olá%20Shaypos!%20Gostaria%20de%20fazer%20o%20pedido%20do%20Air%20Jordan%201%20White%20Classic%20(1350%20MT).%20Ainda%20está%20disponível?" class="buy-now"><i class="fab fa-whatsapp"></i> FAZER PEDIDO</a>
                 </div>
             </div>
 
@@ -133,7 +141,7 @@
                 <div class="product-info">
                     <h4>Air Jordan 11 Retro</h4>
                     <div class="price-tag"><span class="price">2000 MT</span></div>
-                    <a href="https://wa.me/258874055437?text=Olá!%20Gostaria%20de%20pedir%20o%20Air%20Jordan%2011%20Retro" class="buy-now"><i class="fab fa-whatsapp"></i> COMPRAR</a>
+                    <a href="https://wa.me/258874055437?text=Olá%20Shaypos!%20Gostaria%20de%20fazer%20o%20pedido%20do%20Air%20Jordan%2011%20Retro%20(2000%20MT).%20Como%20posso%20proceder?" class="buy-now"><i class="fab fa-whatsapp"></i> FAZER PEDIDO</a>
                 </div>
             </div>
 
@@ -142,7 +150,7 @@
                 <div class="product-info">
                     <h4>Air Jordan Navy Blue</h4>
                     <div class="price-tag"><span class="price">1600 MT</span></div>
-                    <a href="https://wa.me/258874055437?text=Olá!%20Gostaria%20de%20pedir%20o%20Air%20Jordan%20Navy%20Blue" class="buy-now"><i class="fab fa-whatsapp"></i> COMPRAR</a>
+                    <a href="https://wa.me/258874055437?text=Olá%20Shaypos!%20Tenho%20interesse%20no%20Air%20Jordan%20Navy%20Blue%20(1600%20MT).%20Pode%20me%20ajudar%20com%20o%20tamanho?" class="buy-now"><i class="fab fa-whatsapp"></i> FAZER PEDIDO</a>
                 </div>
             </div>
 
@@ -151,7 +159,7 @@
                 <div class="product-info">
                     <h4>Nike Dunk Pink Edition</h4>
                     <div class="price-tag"><span class="price">1800 MT</span></div>
-                    <a href="https://wa.me/258874055437?text=Olá!%20Gostaria%20de%20pedir%20o%20Nike%20Dunk%20Pink%20Edition" class="buy-now"><i class="fab fa-whatsapp"></i> COMPRAR</a>
+                    <a href="https://wa.me/258874055437?text=Olá%20Shaypos!%20Amei%20o%20Nike%20Dunk%20Pink%20Edition.%20Quero%20fazer%20o%20pedido!" class="buy-now"><i class="fab fa-whatsapp"></i> FAZER PEDIDO</a>
                 </div>
             </div>
 
@@ -160,25 +168,7 @@
                 <div class="product-info">
                     <h4>Crocs Classic Confort</h4>
                     <div class="price-tag"><span class="price">1200 MT</span></div>
-                    <a href="https://wa.me/258874055437?text=Olá!%20Gostaria%20de%20pedir%20o%20Crocs%20Classic%20Confort" class="buy-now"><i class="fab fa-whatsapp"></i> COMPRAR</a>
-                </div>
-            </div>
-
-            <div class="product-card" data-cat="camisas">
-                <div class="img-box"><img src="Real Madrid.jpg.jpg"></div>
-                <div class="product-info">
-                    <h4>Camisa Real Madrid 24/25</h4>
-                    <div class="price-tag"><span class="price">650 MT</span></div>
-                    <a href="https://wa.me/258874055437?text=Olá!%20Gostaria%20de%20pedir%20a%20Camisa%20do%20Real%20Madrid" class="buy-now"><i class="fab fa-whatsapp"></i> COMPRAR</a>
-                </div>
-            </div>
-
-            <div class="product-card" data-cat="camisas">
-                <div class="img-box"><img src="Barcelona .jpg.jpg"></div>
-                <div class="product-info">
-                    <h4>Camisa FC Barcelona</h4>
-                    <div class="price-tag"><span class="price">650 MT</span></div>
-                    <a href="https://wa.me/258874055437?text=Olá!%20Gostaria%20de%20pedir%20a%20Camisa%20do%20Barcelona" class="buy-now"><i class="fab fa-whatsapp"></i> COMPRAR</a>
+                    <a href="https://wa.me/258874055437?text=Olá!%20Quero%20comprar%20o%20Crocs%20Classic%20Confort.%20Estão%20na%20cidade%20da%20Beira?" class="buy-now"><i class="fab fa-whatsapp"></i> FAZER PEDIDO</a>
                 </div>
             </div>
 
@@ -187,7 +177,7 @@
                 <div class="product-info">
                     <h4>Airpods Pro (Branco V1)</h4>
                     <div class="price-tag"><span class="price">900 MT</span></div>
-                    <a href="https://wa.me/258874055437?text=Olá!%20Gostaria%20de%20informações%20sobre%20o%20Airpods%20Pro%20Branco" class="buy-now"><i class="fab fa-whatsapp"></i> COMPRAR</a>
+                    <a href="https://wa.me/258874055437?text=Olá!%20Gostaria%20de%20adquirir%20os%20Airpods%20Pro.%20Ainda%20tem%20em%20stock?" class="buy-now"><i class="fab fa-whatsapp"></i> FAZER PEDIDO</a>
                 </div>
             </div>
 
@@ -196,32 +186,45 @@
                 <div class="product-info">
                     <h4>Jogo 30 Segundos</h4>
                     <div class="price-tag"><span class="price">1000 MT</span></div>
-                    <a href="https://wa.me/258874055437?text=Olá!%20Gostaria%20de%20comprar%20o%20Jogo%2030%20Segundos" class="buy-now"><i class="fab fa-whatsapp"></i> COMPRAR</a>
+                    <a href="https://wa.me/258874055437?text=Olá!%20Quero%20o%20Jogo%2030%20Segundos.%20Pode%20entregar%20hoje?" class="buy-now"><i class="fab fa-whatsapp"></i> FAZER PEDIDO</a>
                 </div>
             </div>
-            
+
+        </div>
+
+        <div class="store-details">
+            <div class="detail-item">
+                <i class="fas fa-map-marker-alt"></i>
+                <h5>Localização</h5>
+                <p>Estamos localizados na <strong>Cidade da Beira</strong>. Atendimento presencial e online com a máxima confiança.</p>
             </div>
+            <div class="detail-item">
+                <i class="fas fa-truck"></i>
+                <h5>Entregas</h5>
+                <p>Fazemos entregas rápidas em toda a Beira. Receba os seus sneakers ou tech no conforto da sua casa.</p>
+            </div>
+            <div class="detail-item">
+                <i class="fas fa-clock"></i>
+                <h5>Atendimento</h5>
+                <p>Segunda a Sábado. Respondemos rápido no WhatsApp para garantir o seu estilo!</p>
+            </div>
+        </div>
     </div>
 
-    <a href="https://wa.me/258874055437?text=Olá!%20Gostaria%20de%20ver%20o%20catálogo%20completo." class="wa-fixed" target="_blank"><i class="fab fa-whatsapp"></i></a>
+    <a href="https://wa.me/258874055437?text=Olá%20Shaypos!%20Estou%20a%20ver%20o%20catálogo%20e%20gostaria%20de%20tirar%20algumas%20dúvidas." class="wa-fixed" target="_blank"><i class="fab fa-whatsapp"></i></a>
 
     <footer>
         <h2 style="color: var(--gold); letter-spacing: 5px;">SHAYPOS</h2>
-        <div class="location-info">
-            <p><i class="fas fa-map-marker-alt" style="color: var(--gold);"></i> <strong>LOCALIZAÇÃO:</strong> Estamos localizados na Cidade da Beira, Moçambique.</p>
-            <p><i class="fas fa-truck" style="color: var(--gold);"></i> Fazemos entregas em toda a cidade.</p>
-        </div>
-        <p style="margin-top: 30px; opacity: 0.7;">© 2026 Shaypos Moçambique. Qualidade acima de tudo.</p>
+        <p>© 2026 Shaypos Moçambique. Qualidade acima de tudo.</p>
+        <p style="font-size: 0.8rem; opacity: 0.5; margin-top: 10px;">Beira, Moçambique</p>
     </footer>
 
     <script>
         function filter(c) {
             let cards = document.querySelectorAll('.product-card');
             let btns = document.querySelectorAll('.filter-btn');
-            
-            // Remove active de todos e adiciona no clicado
             btns.forEach(b => b.classList.remove('active'));
-            if(event) event.target.classList.add('active');
+            event.target.classList.add('active');
             
             cards.forEach(card => {
                 if(c === 'all' || card.getAttribute('data-cat') === c) {
