@@ -23,7 +23,6 @@
             scroll-behavior: smooth;
         }
 
-        /* --- TELA DE BOAS-VINDAS --- */
         header {
             height: 100vh;
             background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.9)), 
@@ -44,7 +43,6 @@
             margin: 0;
             letter-spacing: 10px;
             color: var(--gold);
-            text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
         }
 
         .welcome-msg {
@@ -56,7 +54,12 @@
             border: 1px solid rgba(255,255,255,0.2);
         }
 
-        /* --- FILTROS --- */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto 50px;
+            padding: 0 20px;
+        }
+
         .filter-container {
             text-align: center;
             margin: 40px 0;
@@ -77,13 +80,6 @@
         .filter-btn:hover, .filter-btn.active {
             background: var(--gold);
             color: #000;
-        }
-
-        /* --- VITRINE --- */
-        .container {
-            max-width: 1200px;
-            margin: 0 auto 50px;
-            padding: 0 20px;
         }
 
         .vitrine {
@@ -135,7 +131,6 @@
             border-radius: 30px;
             text-decoration: none;
             font-weight: 600;
-            transition: 0.3s;
         }
 
         .whatsapp-float {
@@ -153,7 +148,6 @@
             font-size: 35px;
             z-index: 1000;
             text-decoration: none;
-            transition: 0.3s;
         }
 
         footer {
@@ -169,10 +163,9 @@
     <header>
         <h1>SHAYPOS</h1>
         <div class="welcome-msg">
-            <p>🇲🇿 Qualidade e Estilo em Moçambique.</p>
-            <p style="font-size: 0.9rem; color: #ccc;"><i class="fas fa-map-marker-alt"></i> <b>Beira</b> | 🚚 Fazemos Entregas!</p>
+            <p>🇲🇿 Estilo e Qualidade</p>
+            <p style="font-size: 0.9rem; color: #ccc;"><i class="fas fa-map-marker-alt"></i> <b>Beira</b> | 🚚 Fazemos Entregas</p>
         </div>
-        <a href="#loja" style="margin-top: 30px; color: #fff; text-decoration: none; opacity: 0.8;">↓ Ver Catálogo</a>
     </header>
 
     <div class="container" id="loja">
@@ -184,36 +177,109 @@
         </div>
 
         <div class="vitrine">
+            <!-- JOGOS -->
             <div class="card" data-cat="outros">
                 <img src="30 segundos.jpg.jpg" alt="30 Seconds">
-                <div class="info">
-                    <h3>30 Seconds Board Game</h3>
-                    <span class="preco">2.800 MT</span>
-                    <a href="https://wa.me/258874055437?text=Olá+Shaypos!+Quero+o+jogo+30+Segundos." class="btn-buy"><i class="fab fa-whatsapp"></i> Pedir agora</a>
-                </div>
+                <div class="info"><h3>30 Seconds Board Game</h3><span class="preco">2.800 MT</span><a href="https://wa.me/258874055437?text=Quero+o+30+Segundos" class="btn-buy">Pedir agora</a></div>
             </div>
-
             <div class="card" data-cat="outros">
                 <img src="uno.jpg.jpg" alt="Uno">
-                <div class="info">
-                    <h3>Jogo de Cartas UNO</h3>
-                    <span class="preco">600 MT</span>
-                    <a href="https://wa.me/258874055437?text=Olá+Shaypos!+Quero+o+UNO." class="btn-buy"><i class="fab fa-whatsapp"></i> Pedir agora</a>
-                </div>
+                <div class="info"><h3>Jogo de Cartas UNO</h3><span class="preco">600 MT</span><a href="https://wa.me/258874055437?text=Quero+o+UNO" class="btn-buy">Pedir agora</a></div>
             </div>
 
+            <!-- GADGETS -->
+            <div class="card" data-cat="outros">
+                <img src="Airpods preto1.jpg.jpg" alt="AirPods Black">
+                <div class="info"><h3>AirPods Pro Black</h3><span class="preco">15.000 MT</span><a href="https://wa.me/258874055437?text=Quero+o+AirPods+Preto" class="btn-buy">Pedir agora</a></div>
+            </div>
+            <div class="card" data-cat="outros">
+                <img src="Airpods 1.jpg.jpg" alt="AirPods Pro">
+                <div class="info"><h3>AirPods Pro White</h3><span class="preco">14.500 MT</span><a href="https://wa.me/258874055437?text=Quero+o+AirPods+Pro" class="btn-buy">Pedir agora</a></div>
+            </div>
+
+            <!-- SNEAKERS -->
             <div class="card" data-cat="sneakers">
                 <img src="Air Jordan branco.jpg.jpg" alt="Jordan Branco">
-                <div class="info">
-                    <h3>Air Jordan White Premium</h3>
-                    <span class="preco">8.500 MT</span>
-                    <a href="https://wa.me/258874055437?text=Olá+Shaypos!+Quero+o+Jordan+Branco." class="btn-buy"><i class="fab fa-whatsapp"></i> Pedir agora</a>
-                </div>
+                <div class="info"><h3>Air Jordan White</h3><span class="preco">8.500 MT</span><a href="https://wa.me/258874055437?text=Quero+o+Jordan+Branco" class="btn-buy">Pedir agora</a></div>
+            </div>
+            <div class="card" data-cat="sneakers">
+                <img src="Air Jordan.jpg.jpg" alt="Jordan Azul">
+                <div class="info"><h3>Air Jordan Navy Blue</h3><span class="preco">8.500 MT</span><a href="https://wa.me/258874055437?text=Quero+o+Jordan+Azul" class="btn-buy">Pedir agora</a></div>
+            </div>
+            <div class="card" data-cat="sneakers">
+                <img src="air-force-branca.jpg.jpg" alt="AF1 Branco">
+                <div class="info"><h3>Nike Air Force 1 White</h3><span class="preco">5.500 MT</span><a href="https://wa.me/258874055437?text=Quero+o+Air+Force+Branco" class="btn-buy">Pedir agora</a></div>
+            </div>
+            <div class="card" data-cat="sneakers">
+                <img src="air-force-preta.jpg.jpg" alt="AF1 Preto">
+                <div class="info"><h3>Nike Air Force 1 Black</h3><span class="preco">5.500 MT</span><a href="https://wa.me/258874055437?text=Quero+o+Air+Force+Preto" class="btn-buy">Pedir agora</a></div>
+            </div>
+            <div class="card" data-cat="sneakers">
+                <img src="jordan-retro.jpg.jpg" alt="Jordan Retro">
+                <div class="info"><h3>Air Jordan Retro High</h3><span class="preco">9.500 MT</span><a href="https://wa.me/258874055437?text=Quero+o+Jordan+Retro" class="btn-buy">Pedir agora</a></div>
+            </div>
+            <div class="card" data-cat="sneakers">
+                <img src="Air jordan.jpg (2).jpg" alt="Nike Pink">
+                <div class="info"><h3>Nike Dunk Low Pink</h3><span class="preco">6.500 MT</span><a href="https://wa.me/258874055437?text=Quero+o+Dunk+Rosa" class="btn-buy">Pedir agora</a></div>
             </div>
 
-            <div class="card" data-cat="sneakers">
-                <img src="Air Jordan.jpg.jpg" alt="Jordan Blue">
-                <div class="info">
-                    <h3>Air Jordan 1 Navy Blue</h3>
-                    <span class="preco">8.500 MT</span>
-                    <a href="
+            <!-- CAMISAS -->
+            <div class="card" data-cat="roupas">
+                <img src="brazil.jpg.jpg" alt="Brasil">
+                <div class="info"><h3>Camisa Seleção Brasil</h3><span class="preco">1.800 MT</span><a href="https://wa.me/258874055437?text=Quero+a+camisa+do+Brasil" class="btn-buy">Pedir agora</a></div>
+            </div>
+            <div class="card" data-cat="roupas">
+                <img src="psg.jpg.jpg" alt="PSG">
+                <div class="info"><h3>Camisa PSG 24/25</h3><span class="preco">1.800 MT</span><a href="https://wa.me/258874055437?text=Quero+a+camisa+do+PSG" class="btn-buy">Pedir agora</a></div>
+            </div>
+            <div class="card" data-cat="roupas">
+                <img src="chelsea.jpg.jpg" alt="Chelsea">
+                <div class="info"><h3>Camisa Chelsea Blue</h3><span class="preco">1.800 MT</span><a href="https://wa.me/258874055437?text=Quero+a+camisa+do+Chelsea" class="btn-buy">Pedir agora</a></div>
+            </div>
+            <div class="card" data-cat="roupas">
+                <img src="Barcelona .jpg.jpg" alt="Barcelona">
+                <div class="info"><h3>Camisa Barcelona Home</h3><span class="preco">1.800 MT</span><a href="https://wa.me/258874055437?text=Quero+a+camisa+do+Barcelona" class="btn-buy">Pedir agora</a></div>
+            </div>
+            <div class="card" data-cat="roupas">
+                <img src="Argentona.jpg.jpg" alt="Argentina">
+                <div class="info"><h3>Camisa Argentina Messi</h3><span class="preco">1.800 MT</span><a href="https://wa.me/258874055437?text=Quero+a+camisa+da+Argentina" class="btn-buy">Pedir agora</a></div>
+            </div>
+            <div class="card" data-cat="roupas">
+                <img src="Aston villa.lpg.jpg" alt="Aston Villa">
+                <div class="info"><h3>Camisa Aston Villa</h3><span class="preco">1.800 MT</span><a href="https://wa.me/258874055437?text=Quero+a+camisa+do+Aston+Villa" class="btn-buy">Pedir agora</a></div>
+            </div>
+            <div class="card" data-cat="roupas">
+                <img src="man-city.jpg.jpg" alt="Man City">
+                <div class="info"><h3>Camisa Manchester City</h3><span class="preco">1.800 MT</span><a href="https://wa.me/258874055437?text=Quero+a+camisa+do+City" class="btn-buy">Pedir agora</a></div>
+            </div>
+            <div class="card" data-cat="roupas">
+                <img src="man-united.jpg.jpg" alt="Man United">
+                <div class="info"><h3>Camisa Manchester United</h3><span class="preco">1.800 MT</span><a href="https://wa.me/258874055437?text=Quero+a+camisa+do+United" class="btn-buy">Pedir agora</a></div>
+            </div>
+            <div class="card" data-cat="roupas">
+                <img src="liverpool.jpg.jpg" alt="Liverpool">
+                <div class="info"><h3>Camisa Liverpool Red</h3><span class="preco">1.800 MT</span><a href="https://wa.me/258874055437?text=Quero+a+camisa+do+Liverpool" class="btn-buy">Pedir agora</a></div>
+            </div>
+        </div>
+    </div>
+
+    <a href="https://wa.me/258874055437" class="whatsapp-float" target="_blank"><i class="fab fa-whatsapp"></i></a>
+
+    <footer>
+        <p>&copy; 2026 SHAYPOS MOÇAMBIQUE</p>
+        <p>📍 Beira, Moçambique | Tel: +258 87 405 5437</p>
+    </footer>
+
+    <script>
+        function filterItems(category) {
+            const cards = document.querySelectorAll('.card');
+            const btns = document.querySelectorAll('.filter-btn');
+            btns.forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+            cards.forEach(card => {
+                card.style.display = (category === 'todos' || card.getAttribute('data-cat') === category) ? 'block' : 'none';
+            });
+        }
+    </script>
+</body>
+</html>
