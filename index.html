@@ -23,6 +23,7 @@
             scroll-behavior: smooth;
         }
 
+        /* --- TELA DE BOAS-VINDAS --- */
         header {
             height: 100vh;
             background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.9)), 
@@ -43,6 +44,7 @@
             margin: 0;
             letter-spacing: 10px;
             color: var(--gold);
+            text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
         }
 
         .welcome-msg {
@@ -54,6 +56,7 @@
             border: 1px solid rgba(255,255,255,0.2);
         }
 
+        /* --- FILTROS --- */
         .filter-container {
             text-align: center;
             margin: 40px 0;
@@ -76,6 +79,7 @@
             color: #000;
         }
 
+        /* --- VITRINE --- */
         .container {
             max-width: 1200px;
             margin: 0 auto 50px;
@@ -149,6 +153,7 @@
             font-size: 35px;
             z-index: 1000;
             text-decoration: none;
+            transition: 0.3s;
         }
 
         footer {
@@ -164,8 +169,8 @@
     <header>
         <h1>SHAYPOS</h1>
         <div class="welcome-msg">
-            <p>🇲🇿 Qualidade e Estilo na sua mão.</p>
-            <p style="font-size: 0.9rem; color: #ccc;"><i class="fas fa-map-marker-alt"></i> <b>Beira</b> | 🚚 Entregas em todo o país!</p>
+            <p>🇲🇿 Qualidade e Estilo em Moçambique.</p>
+            <p style="font-size: 0.9rem; color: #ccc;"><i class="fas fa-map-marker-alt"></i> <b>Beira</b> | 🚚 Fazemos Entregas!</p>
         </div>
         <a href="#loja" style="margin-top: 30px; color: #fff; text-decoration: none; opacity: 0.8;">↓ Ver Catálogo</a>
     </header>
@@ -175,79 +180,40 @@
             <button class="filter-btn active" onclick="filterItems('todos')">Todos</button>
             <button class="filter-btn" onclick="filterItems('sneakers')">Sneakers</button>
             <button class="filter-btn" onclick="filterItems('roupas')">Camisas</button>
-            <button class="filter-btn" onclick="filterItems('outros')">Outros</button>
+            <button class="filter-btn" onclick="filterItems('outros')">Acessórios & Jogos</button>
         </div>
 
         <div class="vitrine">
-            <!-- JOGOS -->
+            <div class="card" data-cat="outros">
+                <img src="30 segundos.jpg.jpg" alt="30 Seconds">
+                <div class="info">
+                    <h3>30 Seconds Board Game</h3>
+                    <span class="preco">2.800 MT</span>
+                    <a href="https://wa.me/258874055437?text=Olá+Shaypos!+Quero+o+jogo+30+Segundos." class="btn-buy"><i class="fab fa-whatsapp"></i> Pedir agora</a>
+                </div>
+            </div>
+
             <div class="card" data-cat="outros">
                 <img src="uno.jpg.jpg" alt="Uno">
-                <div class="info"><h3>Jogo UNO</h3><span class="preco">600 MT</span><a href="https://wa.me/258874055437?text=Quero+o+UNO" class="btn-buy">Pedir agora</a></div>
+                <div class="info">
+                    <h3>Jogo de Cartas UNO</h3>
+                    <span class="preco">600 MT</span>
+                    <a href="https://wa.me/258874055437?text=Olá+Shaypos!+Quero+o+UNO." class="btn-buy"><i class="fab fa-whatsapp"></i> Pedir agora</a>
+                </div>
             </div>
 
-            <!-- SNEAKERS -->
             <div class="card" data-cat="sneakers">
-                <img src="air-force-branca.jpg.jpg" alt="Air Force Branco">
-                <div class="info"><h3>Nike Air Force 1 White</h3><span class="preco">5.500 MT</span><a href="https://wa.me/258874055437?text=Quero+Air+Force+Branco" class="btn-buy">Pedir agora</a></div>
+                <img src="Air Jordan branco.jpg.jpg" alt="Jordan Branco">
+                <div class="info">
+                    <h3>Air Jordan White Premium</h3>
+                    <span class="preco">8.500 MT</span>
+                    <a href="https://wa.me/258874055437?text=Olá+Shaypos!+Quero+o+Jordan+Branco." class="btn-buy"><i class="fab fa-whatsapp"></i> Pedir agora</a>
+                </div>
             </div>
+
             <div class="card" data-cat="sneakers">
-                <img src="air-force-preta.jpg.jpg" alt="Air Force Preto">
-                <div class="info"><h3>Nike Air Force 1 Black</h3><span class="preco">5.500 MT</span><a href="https://wa.me/258874055437?text=Quero+Air+Force+Preto" class="btn-buy">Pedir agora</a></div>
-            </div>
-            <div class="card" data-cat="sneakers">
-                <img src="jordan-retro.jpg.jpg" alt="Jordan Retro">
-                <div class="info"><h3>Air Jordan Retro High</h3><span class="preco">9.500 MT</span><a href="https://wa.me/258874055437?text=Quero+Jordan+Retro" class="btn-buy">Pedir agora</a></div>
-            </div>
-
-            <!-- CAMISAS -->
-            <div class="card" data-cat="roupas">
-                <img src="brazil.jpg.jpg" alt="Brasil">
-                <div class="info"><h3>Camisa Seleção Brasil</h3><span class="preco">1.800 MT</span><a href="https://wa.me/258874055437?text=Quero+Camisa+Brasil" class="btn-buy">Pedir agora</a></div>
-            </div>
-            <div class="card" data-cat="roupas">
-                <img src="psg.jpg.jpg" alt="PSG">
-                <div class="info"><h3>Camisa PSG 24/25</h3><span class="preco">1.800 MT</span><a href="https://wa.me/258874055437?text=Quero+Camisa+PSG" class="btn-buy">Pedir agora</a></div>
-            </div>
-            <div class="card" data-cat="roupas">
-                <img src="chelsea.jpg.jpg" alt="Chelsea">
-                <div class="info"><h3>Camisa Chelsea</h3><span class="preco">1.800 MT</span><a href="https://wa.me/258874055437?text=Quero+Camisa+Chelsea" class="btn-buy">Pedir agora</a></div>
-            </div>
-            <div class="card" data-cat="roupas">
-                <img src="man-city.jpg.jpg" alt="Man City">
-                <div class="info"><h3>Camisa Man City</h3><span class="preco">1.800 MT</span><a href="https://wa.me/258874055437?text=Quero+Camisa+City" class="btn-buy">Pedir agora</a></div>
-            </div>
-            <div class="card" data-cat="roupas">
-                <img src="man-united.jpg.jpg" alt="Man United">
-                <div class="info"><h3>Camisa Man United</h3><span class="preco">1.800 MT</span><a href="https://wa.me/258874055437?text=Quero+Camisa+United" class="btn-buy">Pedir agora</a></div>
-            </div>
-            <div class="card" data-cat="roupas">
-                <img src="liverpool.jpg.jpg" alt="Liverpool">
-                <div class="info"><h3>Camisa Liverpool</h3><span class="preco">1.800 MT</span><a href="https://wa.me/258874055437?text=Quero+Camisa+Liverpool" class="btn-buy">Pedir agora</a></div>
-            </div>
-        </div>
-    </div>
-
-    <a href="https://wa.me/258874055437" class="whatsapp-float" target="_blank"><i class="fab fa-whatsapp"></i></a>
-
-    <footer>
-        <p>&copy; 2026 SHAYPOS MOÇAMBIQUE</p>
-        <p>📍 Beira, Moçambique | Tel: +258 87 405 5437</p>
-    </footer>
-
-    <script>
-        function filterItems(category) {
-            const cards = document.querySelectorAll('.card');
-            const btns = document.querySelectorAll('.filter-btn');
-            btns.forEach(btn => btn.classList.remove('active'));
-            event.target.classList.add('active');
-            cards.forEach(card => {
-                if (category === 'todos' || card.getAttribute('data-cat') === category) {
-                    card.style.display = 'block';
-                } else {
-                    card.style.display = 'none';
-                }
-            });
-        }
-    </script>
-</body>
-</html>
+                <img src="Air Jordan.jpg.jpg" alt="Jordan Blue">
+                <div class="info">
+                    <h3>Air Jordan 1 Navy Blue</h3>
+                    <span class="preco">8.500 MT</span>
+                    <a href="
