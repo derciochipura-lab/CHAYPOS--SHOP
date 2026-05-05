@@ -24,7 +24,7 @@
         }
 
         header {
-            height: 60vh;
+            height: 70vh;
             background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.9)), 
                         url('Air Jordan branco.jpg.jpg'); 
             background-size: cover;
@@ -48,10 +48,17 @@
         .welcome-msg {
             background: rgba(255, 255, 255, 0.1);
             backdrop-filter: blur(10px);
-            padding: 15px 30px;
-            border-radius: 50px;
+            padding: 25px 45px;
+            border-radius: 20px;
             margin-top: 20px;
-            border: 1px solid rgba(255,255,255,0.2);
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            max-width: 80%;
+        }
+
+        .welcome-msg h2 {
+            margin: 0;
+            color: var(--gold);
+            font-family: 'Montserrat', sans-serif;
         }
 
         .container {
@@ -114,7 +121,7 @@
 
         .preco {
             display: block;
-            font-size: 1.4rem;
+            font-size: 1.5rem;
             font-weight: bold;
             color: var(--gold);
             margin: 10px 0;
@@ -127,7 +134,7 @@
             gap: 10px;
             background: var(--whatsapp);
             color: white;
-            padding: 12px 20px;
+            padding: 12px 25px;
             border-radius: 30px;
             text-decoration: none;
             font-weight: 600;
@@ -139,20 +146,20 @@
             right: 30px;
             background: var(--whatsapp);
             color: white;
-            width: 60px;
-            height: 60px;
+            width: 65px;
+            height: 65px;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 30px;
+            font-size: 35px;
             z-index: 1000;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+            text-decoration: none;
         }
 
         footer {
             text-align: center;
-            padding: 40px 20px;
+            padding: 60px 20px;
             color: #777;
             border-top: 1px solid #222;
         }
@@ -163,7 +170,9 @@
     <header>
         <h1>SHAYPOS</h1>
         <div class="welcome-msg">
-            <p>🇲🇿 Beira | Qualidade & Estilo</p>
+            <h2>Bem-vindo à Shaypos!</h2>
+            <p>🇲🇿 A tua loja de confiança na <b>Beira</b>. Estilo, qualidade e as melhores marcas aos melhores preços.</p>
+            <p style="font-size: 0.9rem; color: #ccc;"><i class="fas fa-truck"></i> Fazemos entregas em toda a cidade!</p>
         </div>
     </header>
 
@@ -172,50 +181,27 @@
             <button class="filter-btn active" onclick="filterItems('todos')">Todos</button>
             <button class="filter-btn" onclick="filterItems('sneakers')">Sneakers</button>
             <button class="filter-btn" onclick="filterItems('roupas')">Roupas</button>
-            <button class="filter-btn" onclick="filterItems('outros')">Acessórios & Jogos</button>
+            <button class="filter-btn" onclick="filterItems('outros')">Gadgets & Jogos</button>
         </div>
 
         <div class="vitrine">
             
             <div class="card" data-cat="sneakers">
-                <img src="Air Jordan branco.jpg.jpg" alt="Jordan Branco">
-                <div class="info"><h3>Air Jordan 1 White</h3><span class="preco">8.500 MT</span><a href="https://wa.me/258874055437?text=Quero+o+Jordan+Branco" class="btn-buy">Pedir agora</a></div>
+                <img src="Air Jordan branco.jpg.jpg" alt="Air Jordan Branca">
+                <div class="info"><h3>Air Jordan White</h3><span class="preco">8.500 MT</span><a href="https://wa.me/258874055437?text=Quero+o+Jordan+Branco" class="btn-buy">Pedir agora</a></div>
             </div>
             <div class="card" data-cat="sneakers">
                 <img src="Jornan 11.jpg.jpg" alt="Jordan 11">
                 <div class="info"><h3>Air Jordan 11 Retro</h3><span class="preco">9.500 MT</span><a href="https://wa.me/258874055437?text=Quero+o+Jordan+11" class="btn-buy">Pedir agora</a></div>
             </div>
             <div class="card" data-cat="sneakers">
-                <img src="Air Jordan.jpg.jpg" alt="Jordan Navy">
-                <div class="info"><h3>Air Jordan Navy Blue</h3><span class="preco">8.500 MT</span><a href="https://wa.me/258874055437?text=Quero+o+Jordan+Azul" class="btn-buy">Pedir agora</a></div>
-            </div>
-            <div class="card" data-cat="sneakers">
-                <img src="Air jordan.jpg (2).jpg" alt="Dunk Pink">
-                <div class="info"><h3>Nike Dunk Low Pink</h3><span class="preco">6.500 MT</span><a href="https://wa.me/258874055437?text=Quero+o+Dunk+Rosa" class="btn-buy">Pedir agora</a></div>
-            </div>
-            <div class="card" data-cat="sneakers">
                 <img src="Crocs.jpg.jpg" alt="Crocs">
                 <div class="info"><h3>Crocs Classic</h3><span class="preco">2.500 MT</span><a href="https://wa.me/258874055437?text=Quero+a+Crocs" class="btn-buy">Pedir agora</a></div>
             </div>
 
-            <div class="card" data-cat="roupas">
-                <img src="Argentona.jpg.jpg" alt="Argentina">
-                <div class="info"><h3>Camisa Argentina</h3><span class="preco">1.800 MT</span><a href="https://wa.me/258874055437?text=Quero+a+camisa+da+Argentina" class="btn-buy">Pedir agora</a></div>
+            <div class="card" data-cat="outros">
+                <img src="Airpods 1.jpg.jpg" alt="AirPods Branco">
+                <div class="info"><h3>AirPods Pro White</h3><span class="preco">14.500 MT</span><a href="https://wa.me/258874055437?text=Quero+os+Airpods+Brancos" class="btn-buy">Pedir agora</a></div>
             </div>
-            <div class="card" data-cat="roupas">
-                <img src="Barcelona .jpg.jpg" alt="Barcelona">
-                <div class="info"><h3>Camisa Barcelona</h3><span class="preco">1.800 MT</span><a href="https://wa.me/258874055437?text=Quero+a+camisa+do+Barcelona" class="btn-buy">Pedir agora</a></div>
-            </div>
-            <div class="card" data-cat="roupas">
-                <img src="Aston villa.lpg.jpg" alt="Aston Villa">
-                <div class="info"><h3>Camisa Aston Villa</h3><span class="preco">1.800 MT</span><a href="https://wa.me/258874055437?text=Quero+a+camisa+do+Aston+Villa" class="btn-buy">Pedir agora</a></div>
-            </div>
-            <div class="card" data-cat="roupas">
-                <img src="Real Madrid.jpg.jpg" alt="Real Madrid">
-                <div class="info"><h3>Camisa Real Madrid</h3><span class="preco">1.800 MT</span><a href="https://wa.me/258874055437?text=Quero+a+camisa+do+Real+Madrid" class="btn-buy">Pedir agora</a></div>
-            </div>
-            <div class="card" data-cat="roupas">
-                <img src="Bayern .jpg.jpg" alt="Bayern">
-                <div class="info"><h3>Camisa Bayern Munich</h3><span class="preco">1.800 MT</span><a href="https://wa.me/258874055437?text=Quero+a+camisa+do+Bayern" class="btn-buy">Pedir agora</a></div>
-            </div>
-            <div class="card" data
+            <div class="card" data-cat="outros">
+                <img src="Airpods preto1.jpg.jpg" alt="Air
