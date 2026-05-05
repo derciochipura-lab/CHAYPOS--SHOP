@@ -1,88 +1,220 @@
-<div class="vitrine">
-    
-    <!-- CATEGORIA: JOGOS -->
-    <div class="card" data-category="jogos">
-        <img src="30segundos.jpg" alt="Jogo 30 Seconds">
-        <div class="info">
-            <h3>30 Seconds Board Game</h3>
-            <p class="preco">2.800 MT</p>
-            <a href="https://wa.me/258874055437?text=Olá+Shaypos!+Quero+o+30+Seconds" class="btn-buy">🛒 Comprar no Zap</a>
+<!DOCTYPE html>
+<html lang="pt-pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shaypos | Loja Oficial</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --gold: #d4af37;
+            --dark-bg: #0a0a0a;
+            --card-bg: #161616;
+            --accent: #007bff;
+            --whatsapp: #25d366;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--dark-bg);
+            color: #fff;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+
+        /* --- TELA DE BOAS-VINDAS (HERO) --- */
+        header {
+            height: 100vh;
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.9)), 
+                        url('Air Jordan branco.jpg.jpg'); /* Fundo com sua foto */
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            border-bottom: 3px solid var(--gold);
+        }
+
+        header h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 4rem;
+            margin: 0;
+            letter-spacing: 10px;
+            color: var(--gold);
+            text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+        }
+
+        .welcome-msg {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 20px 40px;
+            border-radius: 50px;
+            margin-top: 20px;
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+
+        /* --- VITRINE --- */
+        .container {
+            max-width: 1200px;
+            margin: 50px auto;
+            padding: 0 20px;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 40px;
+            color: var(--gold);
+        }
+
+        .vitrine {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border-radius: 20px;
+            overflow: hidden;
+            transition: 0.4s;
+            border: 1px solid #222;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            border-color: var(--gold);
+        }
+
+        .card img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+        }
+
+        .info {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .preco {
+            display: block;
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--gold);
+            margin: 10px 0;
+        }
+
+        /* --- BOTÕES WHATSAPP --- */
+        .btn-buy {
+            display: inline-block;
+            background: var(--whatsapp);
+            color: white;
+            padding: 12px 25px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        .btn-buy:hover {
+            filter: brightness(1.2);
+            transform: scale(1.05);
+        }
+
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: var(--whatsapp);
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 30px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+            z-index: 1000;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>SHAYPOS</h1>
+        <div class="welcome-msg">
+            <p>🇲🇿 A melhor seleção de Sneakers, Jogos e Acessórios em Moçambique.</p>
+        </div>
+        <a href="#loja" style="margin-top: 30px; color: #fff; text-decoration: none;">↓ Explorar Catálogo</a>
+    </header>
+
+    <div class="container" id="loja">
+        <h2 class="section-title">Nossos Produtos</h2>
+        <div class="vitrine">
+            
+            <!-- PRODUTOS BASEADOS NOS SEUS ARQUIVOS -->
+            <div class="card">
+                <img src="30 segundos.jpg.jpg" alt="Jogo 30 Segundos">
+                <div class="info">
+                    <h3>30 Seconds Board Game</h3>
+                    <span class="preco">1200 MT</span>
+                    <a href="https://wa.me/258874055437?text=Quero+o+jogo+30+Segundos" class="btn-buy">Pedir no WhatsApp</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="Air Jordan branco.jpg.jpg" alt="Air Jordan Branco">
+                <div class="info">
+                    <h3>Air Jordan White Premium</h3>
+                    <span class="preco">3000 MT</span>
+                    <a href="https://wa.me/258874055437?text=Quero+o+Air+Jordan+Branco" class="btn-buy">Pedir no WhatsApp</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="Airpods 1.jpg.jpg" alt="AirPods">
+                <div class="info">
+                    <h3>AirPods Pro Gen 1</h3>
+                    <span class="preco">800 MT</span>
+                    <a href="https://wa.me/258874055437?text=Quero+os+Airpods" class="btn-buy">Pedir no WhatsApp</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="Argentona.jpg.jpg" alt="Camisa Argentina">
+                <div class="info">
+                    <h3>Camisa Argentina </h3>
+                    <span class="preco">650 MT</span>
+                    <a href="https://wa.me/258874055437?text=Quero+a+camisa+da+Argentina" class="btn-buy">Pedir no WhatsApp</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="Barcelona .jpg.jpg" alt="Camisa Barcelona">
+                <div class="info">
+                    <h3>Camisa Barcelona Special</h3>
+                    <span class="preco">650 MT</span>
+                    <a href="https://wa.me/258874055437?text=Quero+a+camisa+do+Barcelona" class="btn-buy">Pedir no WhatsApp</a>
+                </div>
+            </div>
+
         </div>
     </div>
 
-    <!-- CATEGORIA: SAPATILHAS -->
-    <div class="card" data-category="sapatilhas">
-        <img src="jordan-white.jpg" alt="Air Jordan White">
-        <div class="info">
-            <h3>Air Jordan 1 Low White Premium</h3>
-            <p class="preco">8.500 MT</p>
-            <a href="https://wa.me/258874055437?text=Olá+Shaypos!+Quero+o+Jordan+Branco" class="btn-buy">🛒 Comprar no Zap</a>
-        </div>
-    </div>
+    <!-- BOTÃO FLUTUANTE DO ZAP -->
+    <a href="https://wa.me/258874055437" class="whatsapp-float" target="_blank">
+        📲
+    </a>
 
-    <div class="card" data-category="sapatilhas">
-        <img src="nike-dunk-pink.jpg" alt="Nike Dunk Pink">
-        <div class="info">
-            <h3>Nike Dunk Low Rose Whisper</h3>
-            <p class="preco">6.500 MT</p>
-            <a href="https://wa.me/258874055437?text=Olá+Shaypos!+Quero+o+Dunk+Rosa" class="btn-buy">🛒 Comprar no Zap</a>
-        </div>
-    </div>
+    <footer style="text-align: center; padding: 40px; color: #555;">
+        &copy; 2026 SHAYPOS MOÇAMBIQUE - Qualidade em cada passo.
+    </footer>
 
-    <div class="card" data-category="sapatilhas">
-        <img src="jordan-blue.jpg" alt="Jordan Blue">
-        <div class="info">
-            <h3>Air Jordan 1 Low Navy Blue</h3>
-            <p class="preco">8.500 MT</p>
-            <a href="https://wa.me/258874055437?text=Olá+Shaypos!+Quero+o+Jordan+Azul" class="btn-buy">🛒 Comprar no Zap</a>
-        </div>
-    </div>
-
-    <!-- CATEGORIA: ACESSÓRIOS/GADGETS -->
-    <div class="card" data-category="celular">
-        <img src="airpods-box.jpg" alt="AirPods Pro Box">
-        <div class="info">
-            <h3>AirPods Pro 2 (Na Caixa)</h3>
-            <p class="preco">14.500 MT</p>
-            <a href="https://wa.me/258874055437?text=Olá+Shaypos!+Quero+os+AirPods+Pro" class="btn-buy">🛒 Comprar no Zap</a>
-        </div>
-    </div>
-
-    <div class="card" data-category="celular">
-        <img src="airpods-black.jpg" alt="AirPods Black">
-        <div class="info">
-            <h3>AirPods Pro Black Edition</h3>
-            <p class="preco">15.000 MT</p>
-            <a href="https://wa.me/258874055437?text=Olá+Shaypos!+Quero+os+AirPods+Pretos" class="btn-buy">🛒 Comprar no Zap</a>
-        </div>
-    </div>
-
-    <!-- CATEGORIA: CAMISAS DE TIME -->
-    <div class="card" data-category="roupas">
-        <img src="argentina.jpg" alt="Camisa Argentina">
-        <div class="info">
-            <h3>Camisa Argentina Messi #10</h3>
-            <p class="preco">1.800 MT</p>
-            <a href="https://wa.me/258874055437?text=Olá+Shaypos!+Quero+a+camisa+da+Argentina" class="btn-buy">🛒 Comprar no Zap</a>
-        </div>
-    </div>
-
-    <div class="card" data-category="roupas">
-        <img src="aston-villa.jpg" alt="Camisa Aston Villa">
-        <div class="info">
-            <h3>Camisa Aston Villa 24/25</h3>
-            <p class="preco">1.800 MT</p>
-            <a href="https://wa.me/258874055437?text=Olá+Shaypos!+Quero+a+camisa+do+Aston+Villa" class="btn-buy">🛒 Comprar no Zap</a>
-        </div>
-    </div>
-
-    <div class="card" data-category="roupas">
-        <img src="barcelona.jpg" alt="Camisa Barcelona">
-        <div class="info">
-            <h3>Camisa Barcelona Special Edition</h3>
-            <p class="preco">2.000 MT</p>
-            <a href="https://wa.me/258874055437?text=Olá+Shaypos!+Quero+a+camisa+do+Barcelona" class="btn-buy">🛒 Comprar no Zap</a>
-        </div>
-    </div>
-
-</div>
+</body>
+</html>
