@@ -1,148 +1,322 @@
 <!DOCTYPE html>
 <html lang="pt-pt">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BEM VINDO A SHAYPOS | Official Store Beira</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <style>
-        :root {
-            --gold: #d4af37;
-            --dark: #0a0a0a;
-            --card-bg: #141414;
-            --whatsapp: #25d366;
-        }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BEM VINDO A SHAYPOS | Official Store Beira</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --gold: #d4af37;
+            --dark: #0a0a0a;
+            --card-bg: #141414;
+            --whatsapp: #25d366;
+        }
 
-        * { box-sizing: border-box; margin: 0; padding: 0; }
-        body { font-family: 'Poppins', sans-serif; background-color: var(--dark); color: #ffffff; line-height: 1.6; overflow-x: hidden; }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Poppins', sans-serif; background-color: var(--dark); color: #ffffff; line-height: 1.6; overflow-x: hidden; }
 
-        /* CABEÇALHO */
-        header {
-            height: 70vh;
-            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.9)), url('Air Jordan branco.jpg.jpg');
-            background-size: cover; background-position: center; background-attachment: fixed;
-            display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center;
-            border-bottom: 5px solid var(--gold); padding: 20px;
-        }
+        /* CABEÇALHO */
+        header {
+            height: 70vh;
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.9)), url('Air Jordan branco.jpg.jpg');
+            background-size: cover; background-position: center; background-attachment: fixed;
+            display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center;
+            border-bottom: 5px solid var(--gold); padding: 20px;
+        }
 
-        .brand-name { font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: clamp(3rem, 12vw, 7rem); letter-spacing: 15px; color: var(--gold); margin-bottom: 10px; }
-        
-        .hero-card {
-            background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(15px);
-            padding: 30px; border-radius: 25px; border: 1px solid rgba(212, 175, 55, 0.3);
-            max-width: 800px; box-shadow: 0 20px 40px rgba(0,0,0,0.5);
-        }
+        .brand-name { font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: clamp(3rem, 12vw, 7rem); letter-spacing: 15px; color: var(--gold); margin-bottom: 10px; }
+        
+        .hero-card {
+            background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(15px);
+            padding: 30px; border-radius: 25px; border: 1px solid rgba(212, 175, 55, 0.3);
+            max-width: 800px; box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+        }
 
-        .beira-label { background: var(--gold); color: #000; padding: 8px 20px; border-radius: 50px; font-weight: 800; display: inline-block; margin-top: 15px; }
+        .beira-label { background: var(--gold); color: #000; padding: 8px 20px; border-radius: 50px; font-weight: 800; display: inline-block; margin-top: 15px; }
 
-        /* CONTEÚDO */
-        .main-content { max-width: 1400px; margin: 0 auto; padding: 60px 20px; }
-        
-        .section-title { text-align: center; margin-bottom: 50px; }
-        .section-title h3 { font-family: 'Montserrat', sans-serif; font-size: 2rem; text-transform: uppercase; letter-spacing: 4px; }
-        .underline { width: 60px; height: 3px; background: var(--gold); margin: 10px auto; }
+        /* CONTEÚDO */
+        .main-content { max-width: 1400px; margin: 0 auto; padding: 60px 20px; }
+        
+        .section-title { text-align: center; margin-bottom: 50px; }
+        .section-title h3 { font-family: 'Montserrat', sans-serif; font-size: 2rem; text-transform: uppercase; letter-spacing: 4px; }
+        .underline { width: 60px; height: 3px; background: var(--gold); margin: 10px auto; }
 
-        /* FILTROS */
-        .filters { display: flex; justify-content: center; gap: 10px; flex-wrap: wrap; margin-bottom: 40px; }
-        .filter-btn {
-            background: transparent; border: 1px solid #444; color: #fff;
-            padding: 10px 20px; border-radius: 50px; cursor: pointer; transition: 0.3s;
-        }
-        .filter-btn.active, .filter-btn:hover { border-color: var(--gold); color: var(--gold); }
+        /* FILTROS */
+        .filters { display: flex; justify-content: center; gap: 10px; flex-wrap: wrap; margin-bottom: 40px; }
+        .filter-btn {
+            background: transparent; border: 1px solid #444; color: #fff;
+            padding: 10px 20px; border-radius: 50px; cursor: pointer; transition: 0.3s;
+        }
+        .filter-btn.active, .filter-btn:hover { border-color: var(--gold); color: var(--gold); }
 
-        /* VITRINE */
-        .product-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 30px; }
-        
-        .product-card { 
-            background: var(--card-bg); border-radius: 20px; overflow: hidden; 
-            border: 1px solid #222; transition: 0.4s; 
-        }
-        .product-card:hover { transform: translateY(-10px); border-color: var(--gold); }
+        /* VITRINE */
+        .product-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 30px; }
+        
+        .product-card { 
+            background: var(--card-bg); border-radius: 20px; overflow: hidden; 
+            border: 1px solid #222; transition: 0.4s; 
+        }
+        .product-card:hover { transform: translateY(-10px); border-color: var(--gold); }
 
-        .img-box { width: 100%; height: 320px; overflow: hidden; }
-        .img-box img { width: 100%; height: 100%; object-fit: cover; transition: 0.5s; }
-        .product-card:hover img { transform: scale(1.08); }
+        .img-box { width: 100%; height: 320px; overflow: hidden; }
+        .img-box img { width: 100%; height: 100%; object-fit: cover; transition: 0.5s; }
+        .product-card:hover img { transform: scale(1.08); }
 
-        .product-info { padding: 20px; text-align: center; }
-        .product-info h4 { font-size: 1.1rem; margin-bottom: 15px; height: 45px; display: flex; align-items: center; justify-content: center; }
-        
-        .price-tag { background: rgba(212, 175, 55, 0.1); padding: 10px; border-radius: 12px; margin-bottom: 15px; }
-        .price { font-size: 1.5rem; font-weight: 800; color: var(--gold); }
+        .product-info { padding: 20px; text-align: center; }
+        .product-info h4 { font-size: 1.1rem; margin-bottom: 15px; height: 45px; display: flex; align-items: center; justify-content: center; }
+        
+        .price-tag { background: rgba(212, 175, 55, 0.1); padding: 10px; border-radius: 12px; margin-bottom: 15px; }
+        .price { font-size: 1.5rem; font-weight: 800; color: var(--gold); }
 
-        .buy-now {
-            background: var(--whatsapp); color: #fff; text-decoration: none;
-            padding: 12px; border-radius: 12px; display: flex; align-items: center;
-            justify-content: center; gap: 8px; font-weight: 700; transition: 0.3s;
-        }
-        .buy-now:hover { background: #1eb954; }
+        .buy-now {
+            background: var(--whatsapp); color: #fff; text-decoration: none;
+            padding: 12px; border-radius: 12px; display: flex; align-items: center;
+            justify-content: center; gap: 8px; font-weight: 700; transition: 0.3s;
+        }
+        .buy-now:hover { background: #1eb954; }
 
-        /* WHATSAPP FLOAT */
-        .wa-fixed {
-            position: fixed; bottom: 30px; right: 30px; background: var(--whatsapp);
-            width: 60px; height: 60px; border-radius: 50%; display: flex;
-            align-items: center; justify-content: center; font-size: 30px; color: #fff;
-            z-index: 1000; box-shadow: 0 10px 20px rgba(0,0,0,0.4); text-decoration: none;
-        }
+        /* WHATSAPP FLOAT */
+        .wa-fixed {
+            position: fixed; bottom: 30px; right: 30px; background: var(--whatsapp);
+            width: 60px; height: 60px; border-radius: 50%; display: flex;
+            align-items: center; justify-content: center; font-size: 30px; color: #fff;
+            z-index: 1000; box-shadow: 0 10px 20px rgba(0,0,0,0.4); text-decoration: none;
+        }
 
-        footer { background: #050505; padding: 60px 20px; text-align: center; border-top: 1px solid #222; }
-    </style>
+        footer { background: #050505; padding: 60px 20px; text-align: center; border-top: 1px solid #222; }
+    </style>
 </head>
 <body>
 
-    <header>
-        <div class="brand-name">SHAYPOS</div>
-        <div class="hero-card">
-            <h2>Elite Store Beira</h2>
-            <p>,sneakers  & Tech</p>
-            <div class="beira-label">CIDADE DA BEIRA</div>
-        </div>
-    </header>
+    <header>
+        <div class="brand-name">SHAYPOS</div>
+        <div class="hero-card">
+            <h2>Elite Store Beira</h2>
+            <p>,sneakers  & Tech</p>
+            <div class="beira-label">CIDADE DA BEIRA</div>
+        </div>
+    </header>
 
-    <div class="main-content">
-        <div class="section-title">
-            <h3>Catálogo Oficial</h3>
-            <div class="underline"></div>
-        </div>
+    <div class="main-content">
+        <div class="section-title">
+            <h3>Catálogo Oficial</h3>
+            <div class="underline"></div>
+        </div>
 
-        <div class="filters">
-            <button class="filter-btn active" onclick="filter('all')">Tudo</button>
-            <button class="filter-btn" onclick="filter('sneakers')">Sneakers</button>
-            <button class="filter-btn" onclick="filter('camisas')">Camisas</button>
-            <button class="filter-btn" onclick="filter('tech')">Tech & Lazer</button>
-        </div>
+        <div class="filters">
+            <button class="filter-btn active" onclick="filter('all')">Tudo</button>
+            <button class="filter-btn" onclick="filter('sneakers')">Sneakers</button>
+            <button class="filter-btn" onclick="filter('camisas')">Camisas</button>
+            <button class="filter-btn" onclick="filter('tech')">Tech & Lazer</button>
+        </div>
 
-        <div class="product-grid" id="grid">
-            <div class="product-card" data-cat="sneakers">
-                <div class="img-box"><img src="Air Jordan branco.jpg.jpg"></div>
-                <div class="product-info">
-                    <h4>Air Jordan 1 White Classic</h4>
-                    <div class="price-tag"><span class="price">1350 MT</span></div>
-                    <a href="https://wa.me/258874055437?text=Olá%20Shaypos!%20Gostaria%20de%20comprar%20o%20Air%20Jordan%201%20White.%20(Loja%20Beira)" class="buy-now"><i class="fab fa-whatsapp"></i> COMPRAR</a>
-                </div>
-            </div>
+        <div class="product-grid" id="grid">
+            <div class="product-card" data-cat="sneakers">
+                <div class="img-box"><img src="Air Jordan branco.jpg.jpg"></div>
+                <div class="product-info">
+                    <h4>Air Jordan 1 White Classic</h4>
+                    <div class="price-tag"><span class="price">1350 MT</span></div>
+                    <a href="https://wa.me/258874055437?text=Olá%20Shaypos!%20Gostaria%20de%20comprar%20o%20Air%20Jordan%201%20White.%20(Loja%20Beira)" class="buy-now"><i class="fab fa-whatsapp"></i> COMPRAR</a>
+                </div>
+            </div>
 
-            <div class="product-card" data-cat="sneakers">
-                <div class="img-box"><img src="Jornan 11.jpg.jpg"></div>
-                <div class="product-info">
-                    <h4>Air Jordan 11 Retro</h4>
-                    <div class="price-tag"><span class="price">2000MT</span></div>
-                    <a href="https://wa.me/258874055437?text=Olá%20Shaypos!%20Tenho%20interesse%20no%20Jordan%2011%20Retro.%20(Loja%20Beira)" class="buy-now"><i class="fab fa-whatsapp"></i> COMPRAR</a>
-                </div>
-            </div>
+            <div class="product-card" data-cat="sneakers">
+                <div class="img-box"><img src="Jornan 11.jpg.jpg"></div>
+                <div class="product-info">
+                    <h4>Air Jordan 11 Retro</h4>
+                    <div class="price-tag"><span class="price">2000MT</span></div>
+                    <a href="https://wa.me/258874055437?text=Olá%20Shaypos!%20Tenho%20interesse%20no%20Jordan%2011%20Retro.%20(Loja%20Beira)" class="buy-now"><i class="fab fa-whatsapp"></i> COMPRAR</a>
+                </div>
+            </div>
 
-            <div class="product-card" data-cat="sneakers">
-                <div class="img-box"><img src="Air Jordan.jpg.jpg"></div>
-                <div class="product-info">
-                    <h4>Air Jordan Navy Blue</h4>
-                    <div class="price-tag"><span class="price">1600 MT</span></div>
-                    <a href="https://wa.me/258874055437?text=Olá%20Shaypos!%20Gostaria%20de%20comprar%20o%20Air%20Jordan%20Navy%20Blue.%20(Loja%20Beira)" class="buy-now"><i class="fab fa-whatsapp"></i> COMPRAR</a>
-                </div>
-            </div>
+            <div class="product-card" data-cat="sneakers">
+                <div class="img-box"><img src="Air Jordan.jpg.jpg"></div>
+                <div class="product-info">
+                    <h4>Air Jordan Navy Blue</h4>
+                    <div class="price-tag"><span class="price">1600 MT</span></div>
+                    <a href="https://wa.me/258874055437?text=Olá%20Shaypos!%20Gostaria%20de%20comprar%20o%20Air%20Jordan%20Navy%20Blue.%20(Loja%20Beira)" class="buy-now"><i class="fab fa-whatsapp"></i> COMPRAR</a>
+                </div>
+            </div>
 
-            <div class="product-card" data-cat="sneakers">
-                <div class="img-box"><img src="Air jordan.jpg (2).jpg"></div>
-                <div class="product-info">
-                    <h4>Nike Dunk Pink Edition</h4>
-                    <div class="price-tag"><span class="price">1800 MT</span></div>
-                    <a href="https://wa.me/258874055437?text=Olá%20Shaypos!%20Gostaria%20de%20comprar%20o%20Nike%20Dunk%20Pink.%20(
+            <div class="product-card" data-cat="sneakers">
+                <div class="img-box"><img src="Air jordan.jpg (2).jpg"></div>
+                <div class="product-info">
+                    <h4>Nike Dunk Pink Edition</h4>
+                    <div class="price-tag"><span class="price">1800 MT</span></div>
+                    <a href="https://wa.me/258874055437?text=Olá%20Shaypos!%20Gostaria%20de%20comprar%20o%20Nike%20Dunk%20Pink.%20(Loja%20Beira)" class="buy-now"><i class="fab fa-whatsapp"></i> COMPRAR</a>
+                </div>
+            </div>
+
+            <div class="product-card" data-cat="sneakers">
+                <div class="img-box"><img src="Crocs.jpg.jpg"></div>
+                <div class="product-info">
+                    <h4>Crocs Classic Confort</h4>
+                    <div class="price-tag"><span class="price">1200MT</span></div>
+                    <a href="https://wa.me/258874055437?text=Olá%20Shaypos!%20Gostaria%20de%20comprar%20os%20Crocs%20Classic.%20(Loja%20Beira)" class="buy-now"><i class="fab fa-whatsapp"></i> COMPRAR</a>
+                </div>
+            </div>
+
+            <div class="product-card" data-cat="camisas">
+                <div class="img-box"><img src="Real Madrid.jpg.jpg"></div>
+                <div class="product-info">
+                    <h4>Camisa Real Madrid 24/25</h4>
+                    <div class="price-tag"><span class="price">650 MT</span></div>
+                    <a href="https://wa.me/258874055437?text=Olá%20Shaypos!%20Quero%20a%20camisa%20do%20Real%20Madrid%2024/25.%20(Loja%20Beira)" class="buy-now"><i class="fab fa-whatsapp"></i> COMPRAR</a>
+                </div>
+            </div>
+
+            <div class="product-card" data-cat="camisas">
+                <div class="img-box"><img src="Barcelona .jpg.jpg"></div>
+                <div class="product-info">
+                    <h4>Camisa FC Barcelona</h4>
+                    <div class="price-tag"><span class="price">650 MT</span></div>
+                    <a href="https://wa.me/258874055437?text=Olá%20Shaypos!%20Quero%20a%20camisa%20do%20Barcelona.%20(Loja%20Beira)" class="buy-now"><i class="fab fa-whatsapp"></i> COMPRAR</a>
+                </div>
+            </div>
+
+            <div class="product-card" data-cat="camisas">
+                <div class="img-box"><img src="Argentona.jpg.jpg"></div>
+                <div class="product-info">
+                    <h4>Camisa Seleção Argentina</h4>
+                    <div class="price-tag"><span class="price">650 MT</span></div>
+                    <a href="https://wa.me/258874055437?text=Olá%20Shaypos!%20Quero%20a%20camisa%20da%20Argentina.%20(Loja%20Beira)" class="buy-now"><i class="fab fa-whatsapp"></i> COMPRAR</a>
+                </div>
+            </div>
+
+            <div class="product-card" data-cat="camisas">
+                <div class="img-box"><img src="Bayern .jpg.jpg"></div>
+                <div class="product-info">
+                    <h4>Camisa Bayern Munich</h4>
+                    <div class="price-tag"><span class="price">650MT</span></div>
+                    <a href="https://wa.me/258874055437?text=Olá%20Shaypos!%20Quero%20a%20camisa%20do%20Bayern.%20(Loja%20Beira)" class="buy-now"><i class="fab fa-whatsapp"></i> COMPRAR</a>
+                </div>
+            </div>
+
+            <div class="product-card" data-cat="camisas">
+                <div class="img-box"><img src="Chelsea.jpg.jpg"></div>
+                <div class="product-info">
+                    <h4>Camisa Chelsea FC</h4>
+                    <div class="price-tag"><span class="price">650 MT</span></div>
+                    <a href="https://wa.me/258874055437?text=Olá%20Shaypos!%20Quero%20a%20camisa%20do%20Chelsea.%20(Loja%20Beira)" class="buy-now"><i class="fab fa-whatsapp"></i> COMPRAR</a>
+                </div>
+            </div>
+
+            <div class="product-card" data-cat="camisas">
+                <div class="img-box"><img src="PSG.jpg.jpg"></div>
+                <div class="product-info">
+                    <h4>Camisa Paris Saint-Germain</h4>
+                    <div class="price-tag"><span class="price">650 MT</span></div>
+                    <a href="https://wa.me/258874055437?text=Olá%20Shaypos!%20Quero%20a%20camisa%20do%20PSG.%20(Loja%20Beira)" class="buy-now"><i class="fab fa-whatsapp"></i> COMPRAR</a>
+                </div>
+            </div>
+
+            <div class="product-card" data-cat="camisas">
+                <div class="img-box"><img src="Newcastle.jpg.jpg"></div>
+                <div class="product-info">
+                    <h4>Camisa Newcastle United</h4>
+                    <div class="price-tag"><span class="price">650 MT</span></div>
+                    <a href="https://wa.me/258874055437?text=Olá%20Shaypos!%20Quero%20a%20camisa%20do%20Newcastle.%20(Loja%20Beira)" class="buy-now"><i class="fab fa-whatsapp"></i> COMPRAR</a>
+                </div>
+            </div>
+
+            <div class="product-card" data-cat="camisas">
+                <div class="img-box"><img src="Tothenham.jpg.jpg"></div>
+                <div class="product-info">
+                    <h4>Camisa Tottenham Hotspur</h4>
+                    <div class="price-tag"><span class="price">650 MT</span></div>
+                    <a href="https://wa.me/258874055437?text=Olá%20Shaypos!%20Quero%20a%20camisa%20do%20Tottenham.%20(Loja%20Beira)" class="buy-now"><i class="fab fa-whatsapp"></i> COMPRAR</a>
+                </div>
+            </div>
+
+            <div class="product-card" data-cat="camisas">
+                <div class="img-box"><img src="Aston villa.lpg.jpg"></div>
+                <div class="product-info">
+                    <h4>Camisa Aston Villa</h4>
+                    <div class="price-tag"><span class="price">650 MT</span></div>
+                    <a href="https://wa.me/258874055437?text=Olá%20Shaypos!%20Quero%20a%20camisa%20do%20Aston%20Villa.%20(Loja%20Beira)" class="buy-now"><i class="fab fa-whatsapp"></i> COMPRAR</a>
+                </div>
+            </div>
+
+            <div class="product-card" data-cat="camisas">
+                <div class="img-box"><img src="T-shirts over size.jpg.jpg"></div>
+                <div class="product-info">
+                    <h4>T-Shirts Streetwear Oversize</h4>
+                    <div class="price-tag"><span class="price">110MT</span></div>
+                    <a href="https://wa.me/258874055437?text=Olá%20Shaypos!%20Quero%20a%20T-shirt%20Oversize.%20(Loja%20Beira)" class="buy-now"><i class="fab fa-whatsapp"></i> COMPRAR</a>
+                </div>
+            </div>
+
+            <div class="product-card" data-cat="tech">
+                <div class="img-box"><img src="Airpods 1.jpg.jpg"></div>
+                <div class="product-info">
+                    <h4>Airpods Pro (Branco V1)</h4>
+                    <div class="price-tag"><span class="price">900 MT</span></div>
+                    <a href="https://wa.me/258874055437?text=Olá%20Shaypos!%20Gostaria%20de%20comprar%20os%20Airpods%20Pro%20Brancos.%20(Loja%20Beira)" class="buy-now"><i class="fab fa-whatsapp"></i> COMPRAR</a>
+                </div>
+            </div>
+
+            <div class="product-card" data-cat="tech">
+                <div class="img-box"><img src="Airpods preto1.jpg.jpg"></div>
+                <div class="product-info">
+                    <h4>Airpods Pro Black Matte</h4>
+                    <div class="price-tag"><span class="price">900 MT</span></div>
+                    <a href="https://wa.me/258874055437?text=Olá%20Shaypos!%20Gostaria%20de%20comprar%20os%20Airpods%20Pretos.%20(Loja%20Beira)" class="buy-now"><i class="fab fa-whatsapp"></i> COMPRAR</a>
+                </div>
+            </div>
+
+            <div class="product-card" data-cat="tech">
+                <div class="img-box"><img src="Airpods1.jpg.jpg"></div>
+                <div class="product-info">
+                    <h4>Airpods Premium Series</h4>
+                    <div class="price-tag"><span class="price">900 MT</span></div>
+                    <a href="https://wa.me/258874055437?text=Olá%20Shaypos!%20Gostaria%20de%20comprar%20os%20Airpods%20Premium.%20(Loja%20Beira)" class="buy-now"><i class="fab fa-whatsapp"></i> COMPRAR</a>
+                </div>
+            </div>
+
+            <div class="product-card" data-cat="tech">
+                <div class="img-box"><img src="30 segundos.jpg.jpg"></div>
+                <div class="product-info">
+                    <h4>Jogo 30 Segundos</h4>
+                    <div class="price-tag"><span class="price">1000 MT</span></div>
+                    <a href="https://wa.me/258874055437?text=Olá%20Shaypos!%20Vi%20o%20jogo%2030%20Segundos%20no%20catálogo.%20(Loja%20Beira)" class="buy-now"><i class="fab fa-whatsapp"></i> COMPRAR</a>
+                </div>
+            </div>
+
+            <div class="product-card" data-cat="tech">
+                <div class="img-box"><img src="uno.jpg.jpg"></div>
+                <div class="product-info">
+                    <h4>Jogo de Cartas UNO</h4>
+                    <div class="price-tag"><span class="price">850 MT</span></div>
+                    <a href="https://wa.me/258874055437?text=Olá%20Shaypos!%20Quero%20comprar%20o%20Jogo%20UNO.%20(Loja%20Beira)" class="buy-now"><i class="fab fa-whatsapp"></i> COMPRAR</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <a href="https://wa.me/258874055437?text=Olá%20Shaypos!%20Vi%20o%20catálogo%20da%20Beira%20e%20gostaria%20de%20falar%20com%20um%20atendente." class="wa-fixed" target="_blank"><i class="fab fa-whatsapp"></i></a>
+
+    <footer>
+        <h2 style="color: var(--gold); letter-spacing: 5px;">SHAYPOS</h2>
+        <p>© 2026 Shaypos Moçambique. Qualidade acima de tudo.</p>
+    </footer>
+
+    <script>
+        function filter(c) {
+            let cards = document.querySelectorAll('.product-card');
+            let btns = document.querySelectorAll('.filter-btn');
+            btns.forEach(b => b.classList.remove('active'));
+            event.target.classList.add('active');
+            
+            cards.forEach(card => {
+                if(c === 'all' || card.getAttribute('data-cat') === c) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+    </script>
+</body>
+</html>
